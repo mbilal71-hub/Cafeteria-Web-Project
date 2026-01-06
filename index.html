@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tea 2 Night Café</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Sora:wght@600;700&display=swap" rel="stylesheet">
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="left-header">
+      <div class="logo">
+        <i class="fas fa-mug-hot"></i> Tea 2 Night
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    
+    <div class="search-container">
+      <div class="search-bar">
+        <input type="text" placeholder="Search our menu...">
+        <button><i class="fas fa-search"></i></button>
+      </div>
+      <div class="search-suggestions">
+        <!-- Suggestions injected by JS -->
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <div class="banner">
+    Welcome to Tea 2 Night Café
+  </div>
+
+  <!-- Main Content Grid -->
+  <section class="menu">
+    
+    <!-- Menu Items Column -->
+    <div class="menu-items">
+      <h2>Our Premium Menu</h2>
+
+      <!-- Tea Section -->
+      <div class="section">
+        <h3><i class="fas fa-leaf"></i> Tea Specials</h3>
+        <table>
+          <tr><th>Item</th><th>Price (PKR)</th></tr>
+          <tr><td>Special Chai</td><td>120</td></tr>
+          <tr><td>Green Tea</td><td>100</td></tr>
+          <tr><td>Kashmiri Chai</td><td>200</td></tr>
+          <tr><td>Doodh Patti</td><td>150</td></tr>
+        </table>
+      </div>
+
+      <!-- Juices Section -->
+      <div class="section">
+        <h3><i class="fas fa-glass-martini-alt"></i> Fresh Juices</h3>
+        <table>
+          <tr><th>Item</th><th>Price (PKR)</th></tr>
+          <tr><td>Lemon Juice</td><td>180</td></tr>
+          <tr><td>Orange Juice</td><td>200</td></tr>
+          <tr><td>Apple Juice</td><td>220</td></tr>
+          <tr><td>Pomegranate Juice</td><td>300</td></tr>
+        </table>
+      </div>
+
+      <!-- Shakes Section -->
+      <div class="section">
+        <h3><i class="fas fa-blender"></i> Thick Shakes</h3>
+        <table>
+          <tr><th>Item</th><th>Price (PKR)</th></tr>
+          <tr><td>Chocolate Shake</td><td>350</td></tr>
+          <tr><td>Strawberry Shake</td><td>330</td></tr>
+          <tr><td>Mango Shake</td><td>320</td></tr>
+          <tr><td>Oreo Shake</td><td>380</td></tr>
+        </table>
+      </div>
+
+      <!-- Coffees Section -->
+      <div class="section">
+        <h3><i class="fas fa-coffee"></i> Barista Coffee</h3>
+        <table>
+          <tr><th>Item</th><th>Price (PKR)</th></tr>
+          <tr><td>Cold Coffee</td><td>300</td></tr>
+          <tr><td>Cappuccino</td><td>400</td></tr>
+          <tr><td>Espresso</td><td>280</td></tr>
+          <tr><td>Latte</td><td>350</td></tr>
+        </table>
+      </div>
+
+      <!-- Snacks & Desserts Section -->
+      <div class="section">
+        <h3><i class="fas fa-cookie-bite"></i> Snacks & Desserts</h3>
+        <table>
+          <tr><th>Item</th><th>Price (PKR)</th></tr>
+          <tr><td>French Fries</td><td>220</td></tr>
+          <tr><td>Pastry Slice</td><td>250</td></tr>
+          <tr><td>Ice Cream Scoop</td><td>200</td></tr>
+          <tr><td>Chicken Sandwich</td><td>450</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- Cart Column -->
+    <div class="cart-container">
+      <div class="cart-sidebar">
+        <h3>
+          <span><i class="fas fa-shopping-cart"></i> Your Order</span>
+        </h3>
+        <div class="cart-items">
+          <!-- Cart Items injected by JS -->
+          <p style="text-align:center; color: #64748b; margin-top: 1rem;">Your cart is empty</p>
+        </div>
+        <div class="cart-total">
+          <span>Total:</span>
+          <span>Rs. <span id="cart-total-amount">0</span></span>
+        </div>
+        <button class="pay-btn">
+          <i class="fas fa-credit-card"></i> Pay Bill
+        </button>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>Follow us on social media</p>
+    <div class="social-links">
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-whatsapp"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
+    <br>
+    <p>&copy; 2025 Tea 2 Night Café. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Custom JS -->
+  <script src="script.js"></script>
+</body>
+</html>
