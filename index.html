@@ -1,34 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tea 2 Night Café</title>
+  <title>Premium Bites - Fast Food Cafeteria</title>
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Sora:wght@600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Sora:wght@600;700&display=swap"
+    rel="stylesheet">
   <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <!-- Custom CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
   <!-- Header -->
   <header>
     <div class="left-header">
       <div class="logo">
-        <i class="fas fa-mug-hot"></i> Tea 2 Night
+        <i class="fas fa-utensils"></i> Premium Bites
       </div>
       <nav>
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Menu</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </div>
-    
+
     <div class="search-container">
       <div class="search-bar">
         <input type="text" placeholder="Search our menu...">
@@ -41,75 +45,434 @@
   </header>
 
   <!-- Banner -->
-  <div class="banner">
-    Welcome to Tea 2 Night Café
+  <div class="banner" id="home">
+    <div class="banner-content">
+      <h1 class="banner-title">Premium Bites</h1>
+      <p class="banner-subtitle">Where Quality Meets Flavor</p>
+      <button class="banner-btn" onclick="document.querySelector('#menu').scrollIntoView({behavior: 'smooth'})">Explore
+        Menu</button>
+    </div>
   </div>
 
   <!-- Main Content Grid -->
-  <section class="menu">
-    
+  <section class="menu" id="menu">
+
     <!-- Menu Items Column -->
     <div class="menu-items">
       <h2>Our Premium Menu</h2>
 
-      <!-- Tea Section -->
-      <div class="section">
-        <h3><i class="fas fa-leaf"></i> Tea Specials</h3>
-        <table>
-          <tr><th>Item</th><th>Price (PKR)</th></tr>
-          <tr><td>Special Chai</td><td>120</td></tr>
-          <tr><td>Green Tea</td><td>100</td></tr>
-          <tr><td>Kashmiri Chai</td><td>200</td></tr>
-          <tr><td>Doodh Patti</td><td>150</td></tr>
-        </table>
+      <!-- Fried Chicken Section -->
+      <div class="section fade-in-up">
+        <h3><i class="fas fa-drumstick-bite"></i> Crispy Fried Chicken</h3>
+        <div class="menu-grid">
+          <div class="menu-card" data-name="Crispy Chicken Pieces (2pc)" data-price="350">
+            <div class="menu-card-image">
+              <img
+                src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=400&q=80"
+                alt="Crispy Chicken Pieces">
+            </div>
+            <div class="menu-card-content">
+              <h4>Crispy Chicken Pieces (2pc)</h4>
+              <p class="price">Rs. 350</p>
+              <button class="add-btn"><i class="fas fa-plus"></i> Add</button>
+            </div>
+          </div>
+          <div class="menu-card" data-name="Chicken Bucket (6pc)" data-price="950">
+            <div class="menu-card-image">
+              <img
+                src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=400&q=80"
+                alt="Chicken Bucket">
+            </div>
+            <div class="menu-card-content">
+              <h4>Chicken Bucket (6pc)</h4>
+              <p class="price">Rs. 950</p>
+              <button class="add-btn"><i class="fas fa-plus"></i> Add</button>
+            </div>
+          </div>
+          <div class="menu-card" data-name="Zinger Burger" data-price="450">
+            <div class="menu-card-image">
+              <img
+                src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=400&q=80"
+                alt="Zinger Burger">
+            </div>
+            <div class="menu-card-content">
+              <h4>Zinger Burger</h4>
+              <p class="price">Rs. 450</p>
+              <button class="add-btn"><i class="fas fa-plus"></i> Add</button>
+            </div>
+          </div>
+          <div class="menu-card" data-name="Hot Wings (6pc)" data-price="550">
+            <div class="menu-card-image">
+              <img
+                src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=400&q=80"
+                alt="Hot Wings">
+            </div>
+            <div class="menu-card-content">
+              <h4>Hot Wings (6pc)</h4>
+              <p class="price">Rs. 550</p>
+              <button class="add-btn"><i class="fas fa-plus"></i> Add</button>
+            </div>
+          </div>
+          <div class="menu-card" data-name="Chicken Strips (4pc)" data-price="480">
+            <div class="menu-card-image">
+              <img
+                src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=400&q=80"
+                alt="Chicken Strips">
+            </div>
+            <div class="menu-card-content">
+              <h4>Chicken Strips (4pc)</h4>
+              <p class="price">Rs. 480</p>
+              <button class="add-btn"><i class="fas fa-plus"></i> Add</button>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <!-- Juices Section -->
-      <div class="section">
-        <h3><i class="fas fa-glass-martini-alt"></i> Fresh Juices</h3>
-        <table>
-          <tr><th>Item</th><th>Price (PKR)</th></tr>
-          <tr><td>Lemon Juice</td><td>180</td></tr>
-          <tr><td>Orange Juice</td><td>200</td></tr>
-          <tr><td>Apple Juice</td><td>220</td></tr>
-          <tr><td>Pomegranate Juice</td><td>300</td></tr>
-        </table>
+      <!-- Burgers & Sandwiches Section -->
+      <div class="section fade-in-up">
+        <h3><i class="fas fa-hamburger"></i> Burgers & Sandwiches</h3>
+        <div class="menu-grid">
+          <div class="menu-card" data-name="Classic Beef Burger" data-price="420">
+            <div class="menu-card-image">
+              <img
+                src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&q=80"
+                alt="Classic Beef Burger">
+            </div>
+            <div class="menu-card-content">
+              <h4>Classic Beef Burger</h4>
+              <p class="price">Rs. 420</p>
+              <button class="add-btn"><i class="fas fa-plus"></i> Add</button>
+            </div>
+          </div>
+          <div class="menu-card" data-name="Chicken Burger" data-price="380">
+            <div class="menu-card-image">
+              <img
+                src="https://images.unsplash.com/photo-1606755962773-d324e0a13086?w=400&q=80"
+                alt="Chicken Burger">
+            </div>
+            <div class="menu-card-content">
+              <h4>Chicken Burger</h4>
+              <p class="price">Rs. 380</p>
+              <button class="add-btn"><i class="fas fa-plus"></i> Add</button>
+            </div>
+          </div>
+          <div class="menu-card" data-name="Cheese Burger" data-price="450">
+            <div class="menu-card-image">
+              <img
+                src="https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?w=400&q=80"
+                alt="Cheese Burger">
+            </div>
+            <div class="menu-card-content">
+              <h4>Cheese Burger</h4>
+              <p class="price">Rs. 450</p>
+              <button class="add-btn"><i class="fas fa-plus"></i> Add</button>
+            </div>
+          </div>
+          <div class="menu-card" data-name="Club Sandwich" data-price="500">
+            <div class="menu-card-image">
+              <img
+                src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=400&q=80"
+                alt="Club Sandwich">
+            </div>
+            <div class="menu-card-content">
+              <h4>Club Sandwich</h4>
+              <p class="price">Rs. 500</p>
+              <button class="add-btn"><i class="fas fa-plus"></i> Add</button>
+            </div>
+          </div>
+          <div class="menu-card" data-name="Double Decker Burger" data-price="650">
+            <div class="menu-card-image">
+              <img
+                src="https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=400&q=80"
+                alt="Double Decker Burger">
+            </div>
+            <div class="menu-card-content">
+              <h4>Double Decker Burger</h4>
+              <p class="price">Rs. 650</p>
+              <button class="add-btn"><i class="fas fa-plus"></i> Add</button>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <!-- Shakes Section -->
-      <div class="section">
-        <h3><i class="fas fa-blender"></i> Thick Shakes</h3>
-        <table>
-          <tr><th>Item</th><th>Price (PKR)</th></tr>
-          <tr><td>Chocolate Shake</td><td>350</td></tr>
-          <tr><td>Strawberry Shake</td><td>330</td></tr>
-          <tr><td>Mango Shake</td><td>320</td></tr>
-          <tr><td>Oreo Shake</td><td>380</td></tr>
-        </table>
+      <!-- Pizza Section -->
+      <div class="section fade-in-up">
+        <h3><i class="fas fa-pizza-slice"></i> Fresh Pizza</h3>
+        <div class="menu-grid">
+          <div class="menu-card" data-name="Pepperoni Pizza" data-price="1200">
+            <div class="menu-card-image">
+              <img
+                src="https://images.unsplash.com/photo-1628840042765-356cda07504e?w=400&q=80"
+                alt="Pepperoni Pizza">
+            </div>
+            <div class="menu-card-content">
+              <h4>Pepperoni Pizza</h4>
+              <p class="price">Rs. 1200</p>
+              <button class="add-btn"><i class="fas fa-plus"></i> Add</button>
+            </div>
+          </div>
+          <div class="menu-card" data-name="Chicken Tikka Pizza" data-price="1350">
+            <div class="menu-card-image">
+              <img
+                src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&q=80"
+                alt="Chicken Tikka Pizza">
+            </div>
+            <div class="menu-card-content">
+              <h4>Chicken Tikka Pizza</h4>
+              <p class="price">Rs. 1350</p>
+              <button class="add-btn"><i class="fas fa-plus"></i> Add</button>
+            </div>
+          </div>
+          <div class="menu-card" data-name="Veggie Supreme" data-price="1100">
+            <div class="menu-card-image">
+              <img
+                src="https://images.unsplash.com/photo-1571407970349-bc81e7e96a47?w=400&q=80"
+                alt="Veggie Supreme">
+            </div>
+            <div class="menu-card-content">
+              <h4>Veggie Supreme</h4>
+              <p class="price">Rs. 1100</p>
+              <button class="add-btn"><i class="fas fa-plus"></i> Add</button>
+            </div>
+          </div>
+          <div class="menu-card" data-name="BBQ Chicken Pizza" data-price="1400">
+            <div class="menu-card-image">
+              <img
+                src="https://images.unsplash.com/photo-1595854341625-f33ee10dbf94?w=400&q=80"
+                alt="BBQ Chicken Pizza">
+            </div>
+            <div class="menu-card-content">
+              <h4>BBQ Chicken Pizza</h4>
+              <p class="price">Rs. 1400</p>
+              <button class="add-btn"><i class="fas fa-plus"></i> Add</button>
+            </div>
+          </div>
+          <div class="menu-card" data-name="Margherita Pizza" data-price="950">
+            <div class="menu-card-image">
+              <img
+                src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=400&q=80"
+                alt="Margherita Pizza">
+            </div>
+            <div class="menu-card-content">
+              <h4>Margherita Pizza</h4>
+              <p class="price">Rs. 950</p>
+              <button class="add-btn"><i class="fas fa-plus"></i> Add</button>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <!-- Coffees Section -->
-      <div class="section">
-        <h3><i class="fas fa-coffee"></i> Barista Coffee</h3>
-        <table>
-          <tr><th>Item</th><th>Price (PKR)</th></tr>
-          <tr><td>Cold Coffee</td><td>300</td></tr>
-          <tr><td>Cappuccino</td><td>400</td></tr>
-          <tr><td>Espresso</td><td>280</td></tr>
-          <tr><td>Latte</td><td>350</td></tr>
-        </table>
+      <!-- Soft Drinks & Beverages Section -->
+      <div class="section fade-in-up">
+        <h3><i class="fas fa-glass-whiskey"></i> Soft Drinks & Beverages</h3>
+        <div class="menu-grid">
+          <div class="menu-card" data-name="Coca Cola" data-price="120">
+            <div class="menu-card-image">
+              <img
+                src="https://images.unsplash.com/photo-1581006852262-e4307cf6283a?w=400&q=80"
+                alt="Coca Cola">
+            </div>
+            <div class="menu-card-content">
+              <h4>Coca Cola</h4>
+              <p class="price">Rs. 120</p>
+              <button class="add-btn"><i class="fas fa-plus"></i> Add</button>
+            </div>
+          </div>
+          <div class="menu-card" data-name="Pepsi" data-price="120">
+            <div class="menu-card-image">
+              <img
+                src="https://images.unsplash.com/photo-1629203851122-3726ecdf080e?w=400&q=80"
+                alt="Pepsi">
+            </div>
+            <div class="menu-card-content">
+              <h4>Pepsi</h4>
+              <p class="price">Rs. 120</p>
+              <button class="add-btn"><i class="fas fa-plus"></i> Add</button>
+            </div>
+          </div>
+          <div class="menu-card" data-name="Sprite" data-price="120">
+            <div class="menu-card-image">
+              <img
+                src="https://images.unsplash.com/photo-1625772299848-391b6a87d7b3?w=400&q=80"
+                alt="Sprite">
+            </div>
+            <div class="menu-card-content">
+              <h4>Sprite</h4>
+              <p class="price">Rs. 120</p>
+              <button class="add-btn"><i class="fas fa-plus"></i> Add</button>
+            </div>
+          </div>
+          <div class="menu-card" data-name="Fresh Orange Juice" data-price="250">
+            <div class="menu-card-image">
+              <img
+                src="https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=400&q=80"
+                alt="Fresh Orange Juice">
+            </div>
+            <div class="menu-card-content">
+              <h4>Fresh Orange Juice</h4>
+              <p class="price">Rs. 250</p>
+              <button class="add-btn"><i class="fas fa-plus"></i> Add</button>
+            </div>
+          </div>
+          <div class="menu-card" data-name="Mango Shake" data-price="320">
+            <div class="menu-card-image">
+              <img
+                src="https://images.unsplash.com/photo-1577805947697-89e18249d767?w=400&q=80"
+                alt="Mango Shake">
+            </div>
+            <div class="menu-card-content">
+              <h4>Mango Shake</h4>
+              <p class="price">Rs. 320</p>
+              <button class="add-btn"><i class="fas fa-plus"></i> Add</button>
+            </div>
+          </div>
+          <div class="menu-card" data-name="Chocolate Shake" data-price="350">
+            <div class="menu-card-image">
+              <img
+                src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400&q=80"
+                alt="Chocolate Shake">
+            </div>
+            <div class="menu-card-content">
+              <h4>Chocolate Shake</h4>
+              <p class="price">Rs. 350</p>
+              <button class="add-btn"><i class="fas fa-plus"></i> Add</button>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <!-- Snacks & Desserts Section -->
-      <div class="section">
-        <h3><i class="fas fa-cookie-bite"></i> Snacks & Desserts</h3>
-        <table>
-          <tr><th>Item</th><th>Price (PKR)</th></tr>
-          <tr><td>French Fries</td><td>220</td></tr>
-          <tr><td>Pastry Slice</td><td>250</td></tr>
-          <tr><td>Ice Cream Scoop</td><td>200</td></tr>
-          <tr><td>Chicken Sandwich</td><td>450</td></tr>
-        </table>
+      <!-- Sides & Appetizers Section -->
+      <div class="section fade-in-up">
+        <h3><i class="fas fa-french-fries"></i> Sides & Appetizers</h3>
+        <div class="menu-grid">
+          <div class="menu-card" data-name="French Fries (Regular)" data-price="180">
+            <div class="menu-card-image">
+              <img
+                src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=400&q=80"
+                alt="French Fries">
+            </div>
+            <div class="menu-card-content">
+              <h4>French Fries (Regular)</h4>
+              <p class="price">Rs. 180</p>
+              <button class="add-btn"><i class="fas fa-plus"></i> Add</button>
+            </div>
+          </div>
+          <div class="menu-card" data-name="French Fries (Large)" data-price="250">
+            <div class="menu-card-image">
+              <img
+                src="https://images.unsplash.com/photo-1630431341973-02e1d0f0f8e0?w=400&q=80"
+                alt="French Fries Large">
+            </div>
+            <div class="menu-card-content">
+              <h4>French Fries (Large)</h4>
+              <p class="price">Rs. 250</p>
+              <button class="add-btn"><i class="fas fa-plus"></i> Add</button>
+            </div>
+          </div>
+          <div class="menu-card" data-name="Onion Rings" data-price="220">
+            <div class="menu-card-image">
+              <img
+                src="https://images.unsplash.com/photo-1639024471283-03518883512d?w=400&q=80"
+                alt="Onion Rings">
+            </div>
+            <div class="menu-card-content">
+              <h4>Onion Rings</h4>
+              <p class="price">Rs. 220</p>
+              <button class="add-btn"><i class="fas fa-plus"></i> Add</button>
+            </div>
+          </div>
+          <div class="menu-card" data-name="Mozzarella Sticks (6pc)" data-price="380">
+            <div class="menu-card-image">
+              <img
+                src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=400&q=80"
+                alt="Mozzarella Sticks">
+            </div>
+            <div class="menu-card-content">
+              <h4>Mozzarella Sticks (6pc)</h4>
+              <p class="price">Rs. 380</p>
+              <button class="add-btn"><i class="fas fa-plus"></i> Add</button>
+            </div>
+          </div>
+          <div class="menu-card" data-name="Coleslaw" data-price="150">
+            <div class="menu-card-image">
+              <img
+                src="https://images.unsplash.com/photo-1625938145744-e380515399af?w=400&q=80"
+                alt="Coleslaw">
+            </div>
+            <div class="menu-card-content">
+              <h4>Coleslaw</h4>
+              <p class="price">Rs. 150</p>
+              <button class="add-btn"><i class="fas fa-plus"></i> Add</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Desserts Section -->
+      <div class="section fade-in-up">
+        <h3><i class="fas fa-ice-cream"></i> Desserts</h3>
+        <div class="menu-grid">
+          <div class="menu-card" data-name="Ice Cream Sundae" data-price="280">
+            <div class="menu-card-image">
+              <img
+                src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=400&q=80"
+                alt="Ice Cream Sundae">
+            </div>
+            <div class="menu-card-content">
+              <h4>Ice Cream Sundae</h4>
+              <p class="price">Rs. 280</p>
+              <button class="add-btn"><i class="fas fa-plus"></i> Add</button>
+            </div>
+          </div>
+          <div class="menu-card" data-name="Chocolate Brownie" data-price="320">
+            <div class="menu-card-image">
+              <img
+                src="https://images.unsplash.com/photo-1607920591413-4ec007e70023?w=400&q=80"
+                alt="Chocolate Brownie">
+            </div>
+            <div class="menu-card-content">
+              <h4>Chocolate Brownie</h4>
+              <p class="price">Rs. 320</p>
+              <button class="add-btn"><i class="fas fa-plus"></i> Add</button>
+            </div>
+          </div>
+          <div class="menu-card" data-name="Apple Pie" data-price="250">
+            <div class="menu-card-image">
+              <img
+                src="https://images.unsplash.com/photo-1535920527002-b35e96722eb9?w=400&q=80"
+                alt="Apple Pie">
+            </div>
+            <div class="menu-card-content">
+              <h4>Apple Pie</h4>
+              <p class="price">Rs. 250</p>
+              <button class="add-btn"><i class="fas fa-plus"></i> Add</button>
+            </div>
+          </div>
+          <div class="menu-card" data-name="Cookies (3pc)" data-price="180">
+            <div class="menu-card-image">
+              <img
+                src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&q=80"
+                alt="Cookies">
+            </div>
+            <div class="menu-card-content">
+              <h4>Cookies (3pc)</h4>
+              <p class="price">Rs. 180</p>
+              <button class="add-btn"><i class="fas fa-plus"></i> Add</button>
+            </div>
+          </div>
+          <div class="menu-card" data-name="Cheesecake Slice" data-price="400">
+            <div class="menu-card-image">
+              <img
+                src="https://images.unsplash.com/photo-1533134242116-8e9b7a5d4e5c?w=400&q=80"
+                alt="Cheesecake">
+            </div>
+            <div class="menu-card-content">
+              <h4>Cheesecake Slice</h4>
+              <p class="price">Rs. 400</p>
+              <button class="add-btn"><i class="fas fa-plus"></i> Add</button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -121,7 +484,7 @@
         </h3>
         <div class="cart-items">
           <!-- Cart Items injected by JS -->
-          <p style="text-align:center; color: #64748b; margin-top: 1rem;">Your cart is empty</p>
+          <p style="text-align:center; color: #94a3b8; margin-top: 1rem;">Your cart is empty</p>
         </div>
         <div class="cart-total">
           <span>Total:</span>
@@ -145,10 +508,12 @@
       <a href="#"><i class="fab fa-twitter"></i></a>
     </div>
     <br>
-    <p>&copy; 2025 Tea 2 Night Café. All Rights Reserved.</p>
+    <p>&copy; 2025 Premium Bites. All Rights Reserved.</p>
   </footer>
 
   <!-- Custom JS -->
   <script src="script.js"></script>
 </body>
+
 </html>
+
