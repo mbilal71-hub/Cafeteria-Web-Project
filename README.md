@@ -1,10 +1,10 @@
-# 🍔 Premium Bites - Fast Food Cafeteria
+#  Premium Bites - Fast Food Resturant
 
 Welcome to **Premium Bites**, a modern, responsive, and visually stunning web application for a premium fast-food experience.
 
 ![Premium Bites Banner](https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1200&q=80)
 
-## ✨ Features
+##  Features
 
 -   **Dynamic Menu**: Explore a wide variety of categories including Crispy Chicken, Burgers, Pizza, Desserts, and more.
 -   **Interactive Cart**: Add items to your cart, adjust quantities, and see real-time price updates.
@@ -21,13 +21,13 @@ Welcome to **Premium Bites**, a modern, responsive, and visually stunning web ap
 -   **Google Fonts**: Montserrat and Sora for premium typography.
 -   **Font Awesome**: High-quality iconography.
 
-## 🚀 Quick Start
+##  Quick Start
 
 1.  Clone the repository or download the source code.
 2.  Open `index.html` in any modern web browser.
 3.  Start exploring the menu and adding items to your cart!
 
-## 📜 Documentation
+##  Documentation
 
 For more detailed technical documentation, please refer to [DOCUMENTATION.md](./DOCUMENTATION.md).
 
