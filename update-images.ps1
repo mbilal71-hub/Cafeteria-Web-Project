@@ -15,4 +15,4 @@ $html = $html -replace 'photo-1625938145744-e380515399af', 'photo-1550304084-ad4
 $html = $html -replace 'photo-1533134242116-8e9b7a5d4e5c', 'photo-1524351199679-46cddfdb52c0'
 
 $html | Set-Content 'index.html'
-Write-Host "All images updated successfully in index.html!"
+

@@ -352,8 +352,4 @@ document.addEventListener("DOMContentLoaded", () => {
   // Initialize cart display on load
   updateCartDisplay();
 
-  // Welcome toast
-  setTimeout(() => {
-    showToast("🍔 Welcome to Premium Bites!", "success");
-  }, 500);
 });
