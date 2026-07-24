@@ -4,449 +4,1509 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Premium Bites - Fast Food Cafeteria</title>
+  <title>Crunchy Bites — Taste Happiness, Delivered Fresh</title>
+  <meta name="description" content="Crunchy Bites is your go-to destination for gourmet fast food — crispy fried chicken, juicy burgers, fresh pizza, and more. Order online for fast delivery.">
+  <meta name="keywords" content="fast food, burgers, pizza, fried chicken, food delivery, crunchy bites">
+  <meta property="og:title" content="Crunchy Bites — Taste Happiness, Delivered Fresh">
+  <meta property="og:description" content="Gourmet fast food delivered to your door. Burgers, pizza, chicken, and more.">
+  <meta property="og:type" content="website">
+
   <!-- Google Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Sora:wght@600;700&display=swap"
-    rel="stylesheet">
-  <!-- Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <!-- Custom CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- Header -->
-  <header>
-    <div class="left-header">
-      <div class="logo">
-        <i class="fas fa-utensils"></i> Premium Bites
+  <!-- ============================================================ -->
+  <!-- NAVBAR -->
+  <!-- ============================================================ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+
+      <!-- Logo -->
+      <a href="#home" class="nav-logo">
+        <div class="logo-icon">
+          <i class="fas fa-fire"></i>
+        </div>
+        <div class="logo-text">
+          <span class="logo-primary">Crunchy</span><span class="logo-secondary">Bites</span>
+        </div>
+      </a>
+
+      <!-- Center Nav Links -->
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#deals" class="nav-link">Deals</a></li>
+        <li><a href="#categories" class="nav-link">Categories</a></li>
+        <li><a href="#menu" class="nav-link">Menu</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <!-- Right Actions -->
+      <div class="nav-actions">
+        <!-- Search -->
+        <div class="nav-search-wrap" id="navSearchWrap">
+          <button class="nav-icon-btn" id="searchToggleBtn" aria-label="Search">
+            <i class="fas fa-search"></i>
+          </button>
+          <div class="nav-search-box" id="navSearchBox">
+            <input type="text" id="searchInput" placeholder="Search menu items..." autocomplete="off">
+            <div class="search-suggestions" id="searchSuggestions"></div>
+          </div>
+        </div>
+
+        <!-- Wishlist -->
+        <button class="nav-icon-btn" id="wishlistBtn" aria-label="Wishlist">
+          <i class="far fa-heart"></i>
+          <span class="nav-badge" id="wishlistCount" style="display:none">0</span>
+        </button>
+
+        <!-- Cart -->
+        <button class="nav-icon-btn cart-icon-btn" id="cartToggleBtn" aria-label="Cart">
+          <i class="fas fa-shopping-bag"></i>
+          <span class="nav-badge" id="cartCount">0</span>
+        </button>
+
+        <!-- Login -->
+        <button class="btn-login" aria-label="Login">
+          <i class="fas fa-user"></i>
+          <span>Login</span>
+        </button>
+
+        <!-- Hamburger -->
+        <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
       </div>
-      <nav>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#menu">Menu</a></li>
-          <li><a href="#about">About</a></li>
-        </ul>
-      </nav>
+
+    </div>
+  </nav>
+
+  <!-- ============================================================ -->
+  <!-- HERO SECTION -->
+  <!-- ============================================================ -->
+  <section class="hero" id="home">
+    <!-- Background Shapes -->
+    <div class="hero-bg">
+      <div class="hero-shape hero-shape-1"></div>
+      <div class="hero-shape hero-shape-2"></div>
+      <div class="hero-shape hero-shape-3"></div>
+      <div class="hero-dots"></div>
     </div>
 
-    <div class="search-container">
-      <div class="search-bar">
-        <input type="text" placeholder="Search our menu...">
-        <button><i class="fas fa-search"></i></button>
+    <div class="hero-container">
+      <!-- Left Content -->
+      <div class="hero-left">
+        <div class="hero-badge">
+          <i class="fas fa-bolt"></i>
+          <span>Express Delivery — 30 Min Guarantee</span>
+        </div>
+
+        <h1 class="hero-title">
+          Taste<br>
+          <span class="hero-title-highlight">Happiness,</span><br>
+          Delivered Fresh.
+        </h1>
+
+        <p class="hero-subtitle">
+          From our kitchen to your door — hand-crafted meals prepared with premium ingredients. Real food, delivered fast.
+        </p>
+
+        <div class="hero-cta">
+          <button class="btn-primary ripple" onclick="document.querySelector('#menu').scrollIntoView({behavior:'smooth'})">
+            <i class="fas fa-utensils"></i>
+            Order Now
+          </button>
+          <button class="btn-outline ripple" onclick="document.querySelector('#categories').scrollIntoView({behavior:'smooth'})">
+            <i class="fas fa-compass"></i>
+            Explore Menu
+          </button>
+        </div>
+
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <span class="hero-stat-num">50K+</span>
+            <span class="hero-stat-label">Satisfied Customers</span>
+          </div>
+          <div class="hero-stat-divider"></div>
+          <div class="hero-stat">
+            <span class="hero-stat-num">4.9 / 5</span>
+            <span class="hero-stat-label">Average Rating</span>
+          </div>
+          <div class="hero-stat-divider"></div>
+          <div class="hero-stat">
+            <span class="hero-stat-num">30 Min</span>
+            <span class="hero-stat-label">Average Delivery</span>
+          </div>
+        </div>
       </div>
-      <div class="search-suggestions">
-        <!-- Suggestions injected by JS -->
+
+      <!-- Right Collage -->
+      <div class="hero-right">
+        <!-- Main feature image -->
+        <div class="hero-main-img">
+          <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&q=80" alt="Juicy Gourmet Burger" loading="lazy">
+        </div>
+
+        <!-- Floating food cards -->
+        <div class="hero-float-card hero-float-card-1">
+          <img src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=120&q=80" alt="Fried Chicken">
+          <span>Crispy Chicken</span>
+        </div>
+        <div class="hero-float-card hero-float-card-2">
+          <img src="https://images.unsplash.com/photo-1628840042765-356cda07504e?w=120&q=80" alt="Pizza">
+          <span>Hot Pizza</span>
+        </div>
+        <div class="hero-float-card hero-float-card-3">
+          <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=120&q=80" alt="Milkshake">
+          <span>Milkshakes</span>
+        </div>
+
+        <!-- Badges -->
+        <div class="hero-badge-float hero-badge-discount">
+          <span class="badge-num">50%</span>
+          <span class="badge-label">OFF Today</span>
+        </div>
+        <div class="hero-badge-float hero-badge-delivery">
+          <i class="fas fa-motorcycle"></i>
+          <div>
+            <strong>Free Delivery</strong>
+            <small>On orders over Rs.800</small>
+          </div>
+        </div>
+        <div class="hero-badge-float hero-badge-rating">
+          <div class="badge-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <small>10,000+ Verified Reviews</small>
+        </div>
       </div>
     </div>
-  </header>
 
-  <!-- Banner -->
-  <div class="banner" id="home">
-    <div class="banner-content">
-      <h1 class="banner-title">Premium Bites</h1>
-      <p class="banner-subtitle">Where Quality Meets Flavor</p>
-      <button class="banner-btn" onclick="document.querySelector('#menu').scrollIntoView({behavior: 'smooth'})">Explore
-        Menu</button>
+    <!-- Scroll indicator -->
+    <div class="hero-scroll">
+      <div class="scroll-dot"></div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- OFFER MARQUEE -->
+  <!-- ============================================================ -->
+  <div class="offer-marquee">
+    <div class="marquee-track">
+      <div class="marquee-item"><i class="fas fa-fire"></i> 50% OFF on Bucket Deals</div>
+      <div class="marquee-item"><i class="fas fa-motorcycle"></i> Free Delivery Over Rs.800</div>
+      <div class="marquee-item"><i class="fas fa-gift"></i> Buy 1 Get 1 on Weekends</div>
+      <div class="marquee-item"><i class="fas fa-bolt"></i> Flash Sale — Zinger Burgers Rs.299</div>
+      <div class="marquee-item"><i class="fas fa-star"></i> New Arrivals: Loaded Fries</div>
+      <div class="marquee-item"><i class="fas fa-tags"></i> Family Combo — Save Rs.500</div>
+      <div class="marquee-item"><i class="fas fa-ice-cream"></i> Free Dessert with Any Meal Deal</div>
+      <!-- Duplicate for seamless loop -->
+      <div class="marquee-item"><i class="fas fa-fire"></i> 50% OFF on Bucket Deals</div>
+      <div class="marquee-item"><i class="fas fa-motorcycle"></i> Free Delivery Over Rs.800</div>
+      <div class="marquee-item"><i class="fas fa-gift"></i> Buy 1 Get 1 on Weekends</div>
+      <div class="marquee-item"><i class="fas fa-bolt"></i> Flash Sale — Zinger Burgers Rs.299</div>
+      <div class="marquee-item"><i class="fas fa-star"></i> New Arrivals: Loaded Fries</div>
+      <div class="marquee-item"><i class="fas fa-tags"></i> Family Combo — Save Rs.500</div>
+      <div class="marquee-item"><i class="fas fa-ice-cream"></i> Free Dessert with Any Meal Deal</div>
     </div>
   </div>
 
-  <!-- Main Content Grid -->
-  <section class="menu" id="menu">
-
-    <!-- Menu Items Column -->
-    <div class="menu-items">
-      <h2>Our Premium Menu</h2>
-
-      <!-- Fried Chicken Section -->
-      <div class="section fade-in-up">
-        <h3><i class="fas fa-drumstick-bite"></i> Crispy Fried Chicken</h3>
-        <div class="menu-grid">
-          <div class="menu-card" data-name="Crispy Chicken Pieces (2pc)" data-price="350">
-            <div class="menu-card-image">
-              <img src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=400&q=80"
-                alt="Crispy Chicken Pieces">
-            </div>
-            <div class="menu-card-content">
-              <h4>Crispy Chicken Pieces (2pc)</h4>
-              <p class="price">Rs. 350</p>
-              <button class="add-btn"><i class="fas fa-plus"></i> Add</button>
-            </div>
-          </div>
-          <div class="menu-card" data-name="Chicken Bucket (6pc)" data-price="950">
-            <div class="menu-card-image">
-              <img src="https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?w=400&q=80" alt="Chicken Bucket">
-            </div>
-            <div class="menu-card-content">
-              <h4>Chicken Bucket (6pc)</h4>
-              <p class="price">Rs. 950</p>
-              <button class="add-btn"><i class="fas fa-plus"></i> Add</button>
-            </div>
-          </div>
-          <div class="menu-card" data-name="Zinger Burger" data-price="450">
-            <div class="menu-card-image">
-              <img src="https://images.unsplash.com/photo-1561651823-34feb02250e4?w=400&q=80" alt="Zinger Burger">
-            </div>
-            <div class="menu-card-content">
-              <h4>Zinger Burger</h4>
-              <p class="price">Rs. 450</p>
-              <button class="add-btn"><i class="fas fa-plus"></i> Add</button>
-            </div>
-          </div>
-          <div class="menu-card" data-name="Hot Wings (6pc)" data-price="550">
-            <div class="menu-card-image">
-              <img src="https://images.unsplash.com/photo-1527477396000-e27163b481c2?w=400&q=80" alt="Hot Wings">
-            </div>
-            <div class="menu-card-content">
-              <h4>Hot Wings (6pc)</h4>
-              <p class="price">Rs. 550</p>
-              <button class="add-btn"><i class="fas fa-plus"></i> Add</button>
-            </div>
-          </div>
-          <div class="menu-card" data-name="Chicken Strips (4pc)" data-price="480">
-            <div class="menu-card-image">
-              <img src="https://images.unsplash.com/photo-1562802378-063ec186a863?w=400&q=80" alt="Chicken Strips">
-            </div>
-            <div class="menu-card-content">
-              <h4>Chicken Strips (4pc)</h4>
-              <p class="price">Rs. 480</p>
-              <button class="add-btn"><i class="fas fa-plus"></i> Add</button>
-            </div>
-          </div>
-        </div>
+  <!-- ============================================================ -->
+  <!-- SPECIAL DEALS -->
+  <!-- ============================================================ -->
+  <section class="deals-section" id="deals">
+    <div class="section-container">
+      <div class="section-header reveal-up">
+        <p class="section-label"><i class="fas fa-tags"></i> Limited Time Offers</p>
+        <h2 class="section-title">Featured Deals</h2>
+        <p class="section-subtitle">Grab these exclusive promotional packages before time runs out</p>
       </div>
 
-      <!-- Burgers & Sandwiches Section -->
-      <div class="section fade-in-up">
-        <h3><i class="fas fa-hamburger"></i> Burgers & Sandwiches</h3>
-        <div class="menu-grid">
-          <div class="menu-card" data-name="Classic Beef Burger" data-price="420">
-            <div class="menu-card-image">
-              <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&q=80"
-                alt="Classic Beef Burger">
-            </div>
-            <div class="menu-card-content">
-              <h4>Classic Beef Burger</h4>
-              <p class="price">Rs. 420</p>
-              <button class="add-btn"><i class="fas fa-plus"></i> Add</button>
-            </div>
+      <div class="deals-grid">
+        <!-- Deal 1 -->
+        <div class="deal-card deal-card-1 reveal-up">
+          <div class="deal-bg-img">
+            <img src="https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?w=600&q=80" alt="Chicken Bucket Deal" loading="lazy">
           </div>
-          <div class="menu-card" data-name="Chicken Burger" data-price="380">
-            <div class="menu-card-image">
-              <img src="https://images.unsplash.com/photo-1606755962773-d324e0a13086?w=400&q=80" alt="Chicken Burger">
+          <div class="deal-overlay"></div>
+          <div class="deal-content">
+            <div class="deal-badge golden">
+              <i class="fas fa-crown"></i> MEGA DEAL
             </div>
-            <div class="menu-card-content">
-              <h4>Chicken Burger</h4>
-              <p class="price">Rs. 380</p>
-              <button class="add-btn"><i class="fas fa-plus"></i> Add</button>
+            <h3 class="deal-title">Family Bucket<br>Special</h3>
+            <p class="deal-desc">10pc Crispy Chicken + 2 Large Fries + 4 Drinks</p>
+            <div class="deal-prices">
+              <span class="deal-old">Rs. 2,800</span>
+              <span class="deal-new">Rs. 1,599</span>
             </div>
-          </div>
-          <div class="menu-card" data-name="Cheese Burger" data-price="450">
-            <div class="menu-card-image">
-              <img src="https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?w=400&q=80" alt="Cheese Burger">
+            <div class="deal-countdown" data-countdown="14400" id="countdown1">
+              <div class="countdown-unit"><span class="c-num" id="c1-h">04</span><small>hrs</small></div>
+              <div class="countdown-sep">:</div>
+              <div class="countdown-unit"><span class="c-num" id="c1-m">00</span><small>min</small></div>
+              <div class="countdown-unit"><span class="c-num" id="c1-s">00</span><small>sec</small></div>
             </div>
-            <div class="menu-card-content">
-              <h4>Cheese Burger</h4>
-              <p class="price">Rs. 450</p>
-              <button class="add-btn"><i class="fas fa-plus"></i> Add</button>
-            </div>
-          </div>
-          <div class="menu-card" data-name="Club Sandwich" data-price="500">
-            <div class="menu-card-image">
-              <img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=400&q=80" alt="Club Sandwich">
-            </div>
-            <div class="menu-card-content">
-              <h4>Club Sandwich</h4>
-              <p class="price">Rs. 500</p>
-              <button class="add-btn"><i class="fas fa-plus"></i> Add</button>
-            </div>
-          </div>
-          <div class="menu-card" data-name="Double Decker Burger" data-price="650">
-            <div class="menu-card-image">
-              <img src="https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=400&q=80"
-                alt="Double Decker Burger">
-            </div>
-            <div class="menu-card-content">
-              <h4>Double Decker Burger</h4>
-              <p class="price">Rs. 650</p>
-              <button class="add-btn"><i class="fas fa-plus"></i> Add</button>
-            </div>
+            <button class="btn-deal ripple">Claim Deal</button>
           </div>
         </div>
-      </div>
 
-      <!-- Pizza Section -->
-      <div class="section fade-in-up">
-        <h3><i class="fas fa-pizza-slice"></i> Fresh Pizza</h3>
-        <div class="menu-grid">
-          <div class="menu-card" data-name="Pepperoni Pizza" data-price="1200">
-            <div class="menu-card-image">
-              <img src="https://images.unsplash.com/photo-1628840042765-356cda07504e?w=400&q=80" alt="Pepperoni Pizza">
-            </div>
-            <div class="menu-card-content">
-              <h4>Pepperoni Pizza</h4>
-              <p class="price">Rs. 1200</p>
-              <button class="add-btn"><i class="fas fa-plus"></i> Add</button>
-            </div>
+        <!-- Deal 2 -->
+        <div class="deal-card deal-card-2 reveal-up">
+          <div class="deal-bg-img">
+            <img src="https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=600&q=80" alt="Burger Deal" loading="lazy">
           </div>
-          <div class="menu-card" data-name="Chicken Tikka Pizza" data-price="1350">
-            <div class="menu-card-image">
-              <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&q=80"
-                alt="Chicken Tikka Pizza">
+          <div class="deal-overlay"></div>
+          <div class="deal-content">
+            <div class="deal-badge red">
+              <i class="fas fa-fire"></i> 50% OFF
             </div>
-            <div class="menu-card-content">
-              <h4>Chicken Tikka Pizza</h4>
-              <p class="price">Rs. 1350</p>
-              <button class="add-btn"><i class="fas fa-plus"></i> Add</button>
+            <h3 class="deal-title">Double<br>Burger Feast</h3>
+            <p class="deal-desc">2 Double Decker Burgers + Fries + 2 Drinks</p>
+            <div class="deal-prices">
+              <span class="deal-old">Rs. 1,800</span>
+              <span class="deal-new">Rs. 899</span>
             </div>
-          </div>
-          <div class="menu-card" data-name="Veggie Supreme" data-price="1100">
-            <div class="menu-card-image">
-              <img src="https://images.unsplash.com/photo-1541745537411-b8046dc6d66c?w=400&q=80" alt="Veggie Supreme">
+            <div class="deal-countdown" data-countdown="7200" id="countdown2">
+              <div class="countdown-unit"><span class="c-num" id="c2-h">02</span><small>hrs</small></div>
+              <div class="countdown-sep">:</div>
+              <div class="countdown-unit"><span class="c-num" id="c2-m">00</span><small>min</small></div>
+              <div class="countdown-unit"><span class="c-num" id="c2-s">00</span><small>sec</small></div>
             </div>
-            <div class="menu-card-content">
-              <h4>Veggie Supreme</h4>
-              <p class="price">Rs. 1100</p>
-              <button class="add-btn"><i class="fas fa-plus"></i> Add</button>
-            </div>
-          </div>
-          <div class="menu-card" data-name="BBQ Chicken Pizza" data-price="1400">
-            <div class="menu-card-image">
-              <img src="https://images.unsplash.com/photo-1595854341625-f33ee10dbf94?w=400&q=80"
-                alt="BBQ Chicken Pizza">
-            </div>
-            <div class="menu-card-content">
-              <h4>BBQ Chicken Pizza</h4>
-              <p class="price">Rs. 1400</p>
-              <button class="add-btn"><i class="fas fa-plus"></i> Add</button>
-            </div>
-          </div>
-          <div class="menu-card" data-name="Margherita Pizza" data-price="950">
-            <div class="menu-card-image">
-              <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=400&q=80" alt="Margherita Pizza">
-            </div>
-            <div class="menu-card-content">
-              <h4>Margherita Pizza</h4>
-              <p class="price">Rs. 950</p>
-              <button class="add-btn"><i class="fas fa-plus"></i> Add</button>
-            </div>
+            <button class="btn-deal ripple">Claim Deal</button>
           </div>
         </div>
-      </div>
 
-      <!-- Soft Drinks & Beverages Section -->
-      <div class="section fade-in-up">
-        <h3><i class="fas fa-glass-whiskey"></i> Soft Drinks & Beverages</h3>
-        <div class="menu-grid">
-          <div class="menu-card" data-name="Coca Cola" data-price="120">
-            <div class="menu-card-image">
-              <img src="https://images.unsplash.com/photo-1581006852262-e4307cf6283a?w=400&q=80" alt="Coca Cola">
-            </div>
-            <div class="menu-card-content">
-              <h4>Coca Cola</h4>
-              <p class="price">Rs. 120</p>
-              <button class="add-btn"><i class="fas fa-plus"></i> Add</button>
-            </div>
+        <!-- Deal 3 -->
+        <div class="deal-card deal-card-3 reveal-up">
+          <div class="deal-bg-img">
+            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&q=80" alt="Pizza Deal" loading="lazy">
           </div>
-          <div class="menu-card" data-name="Pepsi" data-price="120">
-            <div class="menu-card-image">
-              <img src="https://images.unsplash.com/photo-1629203851122-3726ecdf080e?w=400&q=80" alt="Pepsi">
+          <div class="deal-overlay"></div>
+          <div class="deal-content">
+            <div class="deal-badge purple">
+              <i class="fas fa-gift"></i> BUY 1 GET 1
             </div>
-            <div class="menu-card-content">
-              <h4>Pepsi</h4>
-              <p class="price">Rs. 120</p>
-              <button class="add-btn"><i class="fas fa-plus"></i> Add</button>
+            <h3 class="deal-title">Pizza<br>Weekend Deal</h3>
+            <p class="deal-desc">Buy any large pizza, get one free every weekend</p>
+            <div class="deal-prices">
+              <span class="deal-old">Rs. 2,400</span>
+              <span class="deal-new">Rs. 1,200</span>
             </div>
+            <div class="deal-countdown" data-countdown="21600" id="countdown3">
+              <div class="countdown-unit"><span class="c-num" id="c3-h">06</span><small>hrs</small></div>
+              <div class="countdown-sep">:</div>
+              <div class="countdown-unit"><span class="c-num" id="c3-m">00</span><small>min</small></div>
+              <div class="countdown-unit"><span class="c-num" id="c3-s">00</span><small>sec</small></div>
+            </div>
+            <button class="btn-deal ripple">Claim Deal</button>
           </div>
-          <div class="menu-card" data-name="Sprite" data-price="120">
-            <div class="menu-card-image">
-              <img src="https://images.unsplash.com/photo-1625772299848-391b6a87d7b3?w=400&q=80" alt="Sprite">
-            </div>
-            <div class="menu-card-content">
-              <h4>Sprite</h4>
-              <p class="price">Rs. 120</p>
-              <button class="add-btn"><i class="fas fa-plus"></i> Add</button>
-            </div>
-          </div>
-          <div class="menu-card" data-name="Fresh Orange Juice" data-price="250">
-            <div class="menu-card-image">
-              <img src="https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=400&q=80"
-                alt="Fresh Orange Juice">
-            </div>
-            <div class="menu-card-content">
-              <h4>Fresh Orange Juice</h4>
-              <p class="price">Rs. 250</p>
-              <button class="add-btn"><i class="fas fa-plus"></i> Add</button>
-            </div>
-          </div>
-          <div class="menu-card" data-name="Mango Shake" data-price="320">
-            <div class="menu-card-image">
-              <img src="https://images.unsplash.com/photo-1577805947697-89e18249d767?w=400&q=80" alt="Mango Shake">
-            </div>
-            <div class="menu-card-content">
-              <h4>Mango Shake</h4>
-              <p class="price">Rs. 320</p>
-              <button class="add-btn"><i class="fas fa-plus"></i> Add</button>
-            </div>
-          </div>
-          <div class="menu-card" data-name="Chocolate Shake" data-price="350">
-            <div class="menu-card-image">
-              <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400&q=80" alt="Chocolate Shake">
-            </div>
-            <div class="menu-card-content">
-              <h4>Chocolate Shake</h4>
-              <p class="price">Rs. 350</p>
-              <button class="add-btn"><i class="fas fa-plus"></i> Add</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Sides & Appetizers Section -->
-      <div class="section fade-in-up">
-        <h3><i class="fas fa-utensils"></i> Sides & Appetizers</h3>
-        <div class="menu-grid">
-
-          <div class="menu-card" data-name="Onion Rings" data-price="220">
-            <div class="menu-card-image">
-              <img src="https://images.unsplash.com/photo-1639024471283-03518883512d?w=400&q=80" alt="Onion Rings">
-            </div>
-            <div class="menu-card-content">
-              <h4>Onion Rings</h4>
-              <p class="price">Rs. 220</p>
-              <button class="add-btn"><i class="fas fa-plus"></i> Add</button>
-            </div>
-          </div>
-          <div class="menu-card" data-name="Mozzarella Sticks (6pc)" data-price="380">
-            <div class="menu-card-image">
-              <img src="https://images.unsplash.com/photo-1548340748-6d2b7d7da280?w=400&q=80" alt="Mozzarella Sticks">
-            </div>
-            <div class="menu-card-content">
-              <h4>Mozzarella Sticks (6pc)</h4>
-              <p class="price">Rs. 380</p>
-              <button class="add-btn"><i class="fas fa-plus"></i> Add</button>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- Desserts Section -->
-      <div class="section fade-in-up">
-        <h3><i class="fas fa-ice-cream"></i> Desserts</h3>
-        <div class="menu-grid">
-          <div class="menu-card" data-name="Ice Cream Sundae" data-price="280">
-            <div class="menu-card-image">
-              <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=400&q=80" alt="Ice Cream Sundae">
-            </div>
-            <div class="menu-card-content">
-              <h4>Ice Cream Sundae</h4>
-              <p class="price">Rs. 280</p>
-              <button class="add-btn"><i class="fas fa-plus"></i> Add</button>
-            </div>
-          </div>
-          <div class="menu-card" data-name="Chocolate Brownie" data-price="320">
-            <div class="menu-card-image">
-              <img src="https://images.unsplash.com/photo-1607920591413-4ec007e70023?w=400&q=80"
-                alt="Chocolate Brownie">
-            </div>
-            <div class="menu-card-content">
-              <h4>Chocolate Brownie</h4>
-              <p class="price">Rs. 320</p>
-              <button class="add-btn"><i class="fas fa-plus"></i> Add</button>
-            </div>
-          </div>
-          <div class="menu-card" data-name="Apple Pie" data-price="250">
-            <div class="menu-card-image">
-              <img src="https://images.unsplash.com/photo-1535920527002-b35e96722eb9?w=400&q=80" alt="Apple Pie">
-            </div>
-            <div class="menu-card-content">
-              <h4>Apple Pie</h4>
-              <p class="price">Rs. 250</p>
-              <button class="add-btn"><i class="fas fa-plus"></i> Add</button>
-            </div>
-          </div>
-          <div class="menu-card" data-name="Cookies (3pc)" data-price="180">
-            <div class="menu-card-image">
-              <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=400&q=80" alt="Cookies">
-            </div>
-            <div class="menu-card-content">
-              <h4>Cookies (3pc)</h4>
-              <p class="price">Rs. 180</p>
-              <button class="add-btn"><i class="fas fa-plus"></i> Add</button>
-            </div>
-          </div>
-
         </div>
       </div>
     </div>
+  </section>
 
-    <!-- Cart Column -->
-    <div class="cart-container">
-      <div class="cart-sidebar">
-        <h3>
-          <span><i class="fas fa-shopping-cart"></i> Your Order</span>
-        </h3>
-        <div class="cart-items">
-          <!-- Cart Items injected by JS -->
-          <p style="text-align:center; color: #94a3b8; margin-top: 1rem;">Your cart is empty</p>
+  <!-- ============================================================ -->
+  <!-- FOOD CATEGORIES -->
+  <!-- ============================================================ -->
+  <section class="categories-section" id="categories">
+    <div class="section-container">
+      <div class="section-header reveal-up">
+        <p class="section-label"><i class="fas fa-th-large"></i> Explore Menu</p>
+        <h2 class="section-title">Food Categories</h2>
+        <p class="section-subtitle">Select a category to quickly jump to your favorite items</p>
+      </div>
+
+      <div class="categories-grid">
+        <a href="#chicken-section" class="category-card reveal-up" data-category="chicken">
+          <div class="category-img-wrap">
+            <img src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=300&q=80" alt="Fried Chicken" loading="lazy">
+          </div>
+          <span class="category-name">Chicken</span>
+          <span class="category-count">5 items</span>
+        </a>
+
+        <a href="#burgers-section" class="category-card reveal-up" data-category="burgers">
+          <div class="category-img-wrap">
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=300&q=80" alt="Burgers" loading="lazy">
+          </div>
+          <span class="category-name">Burgers</span>
+          <span class="category-count">5 items</span>
+        </a>
+
+        <a href="#pizza-section" class="category-card reveal-up" data-category="pizza">
+          <div class="category-img-wrap">
+            <img src="https://images.unsplash.com/photo-1628840042765-356cda07504e?w=300&q=80" alt="Pizza" loading="lazy">
+          </div>
+          <span class="category-name">Pizza</span>
+          <span class="category-count">5 items</span>
+        </a>
+
+        <a href="#drinks-section" class="category-card reveal-up" data-category="drinks">
+          <div class="category-img-wrap">
+            <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=300&q=80" alt="Beverages" loading="lazy">
+          </div>
+          <span class="category-name">Beverages</span>
+          <span class="category-count">6 items</span>
+        </a>
+
+        <a href="#sides-section" class="category-card reveal-up" data-category="fries">
+          <div class="category-img-wrap">
+            <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=300&q=80" alt="Fries" loading="lazy">
+          </div>
+          <span class="category-name">Fries</span>
+          <span class="category-count">2 items</span>
+        </a>
+
+        <a href="#sides-section" class="category-card reveal-up" data-category="wraps">
+          <div class="category-img-wrap">
+            <img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=300&q=80" alt="Wraps" loading="lazy">
+          </div>
+          <span class="category-name">Wraps</span>
+          <span class="category-count">3 items</span>
+        </a>
+
+        <a href="#desserts-section" class="category-card reveal-up" data-category="desserts">
+          <div class="category-img-wrap">
+            <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=300&q=80" alt="Desserts" loading="lazy">
+          </div>
+          <span class="category-name">Desserts</span>
+          <span class="category-count">4 items</span>
+        </a>
+
+        <a href="#deals" class="category-card reveal-up" data-category="combos">
+          <div class="category-img-wrap">
+            <img src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=300&q=80" alt="Combos" loading="lazy">
+          </div>
+          <span class="category-name">Combos</span>
+          <span class="category-count">3 deals</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- FEATURED / BEST SELLERS -->
+  <!-- ============================================================ -->
+  <section class="featured-section" id="featured">
+    <div class="section-container">
+      <div class="section-header reveal-up">
+        <p class="section-label"><i class="fas fa-medal"></i> Top Recommendations</p>
+        <h2 class="section-title">Best Sellers</h2>
+        <p class="section-subtitle">Our highest-rated customer favorites, ordered thousands of times</p>
+      </div>
+
+      <div class="featured-grid">
+
+        <div class="product-card reveal-up" data-name="Crispy Zinger Burger" data-price="450">
+          <div class="product-card-img">
+            <img src="https://images.unsplash.com/photo-1561651823-34feb02250e4?w=500&q=80" alt="Zinger Burger" loading="lazy">
+            <div class="product-badge badge-hot"><i class="fas fa-fire"></i> Best Seller</div>
+            <button class="product-wish" aria-label="Add to wishlist"><i class="far fa-heart"></i></button>
+            <div class="product-quick-view">Quick View</div>
+          </div>
+          <div class="product-card-body">
+            <div class="product-rating">
+              <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+              <span class="rating-num">(4.9)</span>
+            </div>
+            <h4 class="product-name">Crispy Zinger Burger</h4>
+            <p class="product-desc">Crispy chicken fillet, fresh lettuce, spicy mayo sauce</p>
+            <div class="product-footer">
+              <div class="product-price">
+                <span class="price-old">Rs. 550</span>
+                <span class="price-new">Rs. 450</span>
+              </div>
+              <button class="btn-add-cart ripple" data-name="Zinger Burger" data-price="450">
+                <i class="fas fa-plus"></i>
+              </button>
+            </div>
+          </div>
         </div>
-        <div class="cart-total">
-          <span>Total:</span>
-          <span>Rs. <span id="cart-total-amount">0</span></span>
+
+        <div class="product-card reveal-up" data-name="Chicken Bucket (6pc)" data-price="950">
+          <div class="product-card-img">
+            <img src="https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?w=500&q=80" alt="Chicken Bucket" loading="lazy">
+            <div class="product-badge badge-golden"><i class="fas fa-crown"></i> Customer Choice</div>
+            <button class="product-wish" aria-label="Add to wishlist"><i class="far fa-heart"></i></button>
+            <div class="product-quick-view">Quick View</div>
+          </div>
+          <div class="product-card-body">
+            <div class="product-rating">
+              <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+              <span class="rating-num">(4.8)</span>
+            </div>
+            <h4 class="product-name">Chicken Bucket (6pc)</h4>
+            <p class="product-desc">6 pieces of golden crispy fried chicken perfection</p>
+            <div class="product-footer">
+              <div class="product-price">
+                <span class="price-old">Rs. 1,200</span>
+                <span class="price-new">Rs. 950</span>
+              </div>
+              <button class="btn-add-cart ripple" data-name="Chicken Bucket (6pc)" data-price="950">
+                <i class="fas fa-plus"></i>
+              </button>
+            </div>
+          </div>
         </div>
-        <button class="pay-btn">
-          <i class="fas fa-credit-card"></i> Pay Bill
+
+        <div class="product-card reveal-up" data-name="Pepperoni Pizza" data-price="1200">
+          <div class="product-card-img">
+            <img src="https://images.unsplash.com/photo-1628840042765-356cda07504e?w=500&q=80" alt="Pepperoni Pizza" loading="lazy">
+            <div class="product-badge badge-new"><i class="fas fa-star"></i> New Recipe</div>
+            <button class="product-wish" aria-label="Add to wishlist"><i class="far fa-heart"></i></button>
+            <div class="product-quick-view">Quick View</div>
+          </div>
+          <div class="product-card-body">
+            <div class="product-rating">
+              <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></span>
+              <span class="rating-num">(4.7)</span>
+            </div>
+            <h4 class="product-name">Pepperoni Pizza</h4>
+            <p class="product-desc">Hand-tossed dough, rich tomato sauce, loaded pepperoni</p>
+            <div class="product-footer">
+              <div class="product-price">
+                <span class="price-new">Rs. 1,200</span>
+              </div>
+              <button class="btn-add-cart ripple" data-name="Pepperoni Pizza" data-price="1200">
+                <i class="fas fa-plus"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card reveal-up" data-name="Double Decker Burger" data-price="650">
+          <div class="product-card-img">
+            <img src="https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=500&q=80" alt="Double Decker Burger" loading="lazy">
+            <div class="product-badge badge-hot"><i class="fas fa-pepper-hot"></i> Spicy Hit</div>
+            <button class="product-wish" aria-label="Add to wishlist"><i class="far fa-heart"></i></button>
+            <div class="product-quick-view">Quick View</div>
+          </div>
+          <div class="product-card-body">
+            <div class="product-rating">
+              <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+              <span class="rating-num">(4.9)</span>
+            </div>
+            <h4 class="product-name">Double Decker Burger</h4>
+            <p class="product-desc">Double beef patties, special sauce, cheddar cheese</p>
+            <div class="product-footer">
+              <div class="product-price">
+                <span class="price-old">Rs. 800</span>
+                <span class="price-new">Rs. 650</span>
+              </div>
+              <button class="btn-add-cart ripple" data-name="Double Decker Burger" data-price="650">
+                <i class="fas fa-plus"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- FULL MENU -->
+  <!-- ============================================================ -->
+  <section class="menu-section" id="menu">
+    <div class="section-container">
+      <div class="section-header reveal-up">
+        <p class="section-label"><i class="fas fa-book-open"></i> Full Catalogue</p>
+        <h2 class="section-title">Our Complete Menu</h2>
+        <p class="section-subtitle">Every item prepared fresh to order with high-grade ingredients</p>
+      </div>
+
+      <!-- ---- Fried Chicken ---- -->
+      <div class="menu-category-block reveal-up" id="chicken-section">
+        <div class="menu-cat-header">
+          <div class="menu-cat-icon"><i class="fas fa-drumstick-bite"></i></div>
+          <div>
+            <h3 class="menu-cat-title">Crispy Fried Chicken</h3>
+            <p class="menu-cat-sub">Hand-breaded daily and fried to golden perfection</p>
+          </div>
+        </div>
+        <div class="menu-grid">
+
+          <div class="menu-card reveal-up" data-name="Crispy Chicken Pieces (2pc)" data-price="350">
+            <div class="menu-card-img">
+              <img src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=400&q=80" alt="Crispy Chicken Pieces" loading="lazy">
+              <button class="menu-wish" aria-label="Wishlist"><i class="far fa-heart"></i></button>
+            </div>
+            <div class="menu-card-body">
+              <h4 class="menu-item-name">Crispy Chicken Pieces (2pc)</h4>
+              <div class="menu-item-rating"><span class="stars-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span> <span>4.8</span></div>
+              <div class="menu-item-footer">
+                <span class="menu-item-price">Rs. 350</span>
+                <button class="btn-menu-add ripple add-btn" data-name="Crispy Chicken Pieces (2pc)" data-price="350">
+                  <i class="fas fa-plus"></i> Add
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card reveal-up" data-name="Chicken Bucket (6pc)" data-price="950">
+            <div class="menu-card-img">
+              <img src="https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?w=400&q=80" alt="Chicken Bucket" loading="lazy">
+              <span class="menu-img-badge">Popular</span>
+              <button class="menu-wish" aria-label="Wishlist"><i class="far fa-heart"></i></button>
+            </div>
+            <div class="menu-card-body">
+              <h4 class="menu-item-name">Chicken Bucket (6pc)</h4>
+              <div class="menu-item-rating"><span class="stars-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span> <span>4.9</span></div>
+              <div class="menu-item-footer">
+                <span class="menu-item-price">Rs. 950</span>
+                <button class="btn-menu-add ripple add-btn" data-name="Chicken Bucket (6pc)" data-price="950">
+                  <i class="fas fa-plus"></i> Add
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card reveal-up" data-name="Zinger Burger" data-price="450">
+            <div class="menu-card-img">
+              <img src="https://images.unsplash.com/photo-1561651823-34feb02250e4?w=400&q=80" alt="Zinger Burger" loading="lazy">
+              <button class="menu-wish" aria-label="Wishlist"><i class="far fa-heart"></i></button>
+            </div>
+            <div class="menu-card-body">
+              <h4 class="menu-item-name">Zinger Burger</h4>
+              <div class="menu-item-rating"><span class="stars-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span> <span>4.9</span></div>
+              <div class="menu-item-footer">
+                <span class="menu-item-price">Rs. 450</span>
+                <button class="btn-menu-add ripple add-btn" data-name="Zinger Burger" data-price="450">
+                  <i class="fas fa-plus"></i> Add
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card reveal-up" data-name="Hot Wings (6pc)" data-price="550">
+            <div class="menu-card-img">
+              <img src="https://images.unsplash.com/photo-1527477396000-e27163b481c2?w=400&q=80" alt="Hot Wings" loading="lazy">
+              <span class="menu-img-badge badge-spicy"><i class="fas fa-pepper-hot"></i> Spicy</span>
+              <button class="menu-wish" aria-label="Wishlist"><i class="far fa-heart"></i></button>
+            </div>
+            <div class="menu-card-body">
+              <h4 class="menu-item-name">Hot Wings (6pc)</h4>
+              <div class="menu-item-rating"><span class="stars-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></span> <span>4.6</span></div>
+              <div class="menu-item-footer">
+                <span class="menu-item-price">Rs. 550</span>
+                <button class="btn-menu-add ripple add-btn" data-name="Hot Wings (6pc)" data-price="550">
+                  <i class="fas fa-plus"></i> Add
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card reveal-up" data-name="Chicken Strips (4pc)" data-price="480">
+            <div class="menu-card-img">
+              <img src="https://images.unsplash.com/photo-1562802378-063ec186a863?w=400&q=80" alt="Chicken Strips" loading="lazy">
+              <button class="menu-wish" aria-label="Wishlist"><i class="far fa-heart"></i></button>
+            </div>
+            <div class="menu-card-body">
+              <h4 class="menu-item-name">Chicken Strips (4pc)</h4>
+              <div class="menu-item-rating"><span class="stars-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></span> <span>4.5</span></div>
+              <div class="menu-item-footer">
+                <span class="menu-item-price">Rs. 480</span>
+                <button class="btn-menu-add ripple add-btn" data-name="Chicken Strips (4pc)" data-price="480">
+                  <i class="fas fa-plus"></i> Add
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ---- Burgers ---- -->
+      <div class="menu-category-block reveal-up" id="burgers-section">
+        <div class="menu-cat-header">
+          <div class="menu-cat-icon"><i class="fas fa-hamburger"></i></div>
+          <div>
+            <h3 class="menu-cat-title">Burgers & Sandwiches</h3>
+            <p class="menu-cat-sub">Stacked high with premium ingredients on toasted brioche buns</p>
+          </div>
+        </div>
+        <div class="menu-grid">
+
+          <div class="menu-card reveal-up" data-name="Classic Beef Burger" data-price="420">
+            <div class="menu-card-img">
+              <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&q=80" alt="Classic Beef Burger" loading="lazy">
+              <button class="menu-wish" aria-label="Wishlist"><i class="far fa-heart"></i></button>
+            </div>
+            <div class="menu-card-body">
+              <h4 class="menu-item-name">Classic Beef Burger</h4>
+              <div class="menu-item-rating"><span class="stars-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span> <span>4.8</span></div>
+              <div class="menu-item-footer">
+                <span class="menu-item-price">Rs. 420</span>
+                <button class="btn-menu-add ripple add-btn" data-name="Classic Beef Burger" data-price="420">
+                  <i class="fas fa-plus"></i> Add
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card reveal-up" data-name="Chicken Burger" data-price="380">
+            <div class="menu-card-img">
+              <img src="https://images.unsplash.com/photo-1606755962773-d324e0a13086?w=400&q=80" alt="Chicken Burger" loading="lazy">
+              <button class="menu-wish" aria-label="Wishlist"><i class="far fa-heart"></i></button>
+            </div>
+            <div class="menu-card-body">
+              <h4 class="menu-item-name">Chicken Burger</h4>
+              <div class="menu-item-rating"><span class="stars-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></span> <span>4.6</span></div>
+              <div class="menu-item-footer">
+                <span class="menu-item-price">Rs. 380</span>
+                <button class="btn-menu-add ripple add-btn" data-name="Chicken Burger" data-price="380">
+                  <i class="fas fa-plus"></i> Add
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card reveal-up" data-name="Cheese Burger" data-price="450">
+            <div class="menu-card-img">
+              <img src="https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?w=400&q=80" alt="Cheese Burger" loading="lazy">
+              <button class="menu-wish" aria-label="Wishlist"><i class="far fa-heart"></i></button>
+            </div>
+            <div class="menu-card-body">
+              <h4 class="menu-item-name">Cheese Burger</h4>
+              <div class="menu-item-rating"><span class="stars-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span> <span>4.7</span></div>
+              <div class="menu-item-footer">
+                <span class="menu-item-price">Rs. 450</span>
+                <button class="btn-menu-add ripple add-btn" data-name="Cheese Burger" data-price="450">
+                  <i class="fas fa-plus"></i> Add
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card reveal-up" data-name="Club Sandwich" data-price="500">
+            <div class="menu-card-img">
+              <img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=400&q=80" alt="Club Sandwich" loading="lazy">
+              <button class="menu-wish" aria-label="Wishlist"><i class="far fa-heart"></i></button>
+            </div>
+            <div class="menu-card-body">
+              <h4 class="menu-item-name">Club Sandwich</h4>
+              <div class="menu-item-rating"><span class="stars-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></span> <span>4.5</span></div>
+              <div class="menu-item-footer">
+                <span class="menu-item-price">Rs. 500</span>
+                <button class="btn-menu-add ripple add-btn" data-name="Club Sandwich" data-price="500">
+                  <i class="fas fa-plus"></i> Add
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card reveal-up" data-name="Double Decker Burger" data-price="650">
+            <div class="menu-card-img">
+              <img src="https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=400&q=80" alt="Double Decker Burger" loading="lazy">
+              <span class="menu-img-badge">Chef Choice</span>
+              <button class="menu-wish" aria-label="Wishlist"><i class="far fa-heart"></i></button>
+            </div>
+            <div class="menu-card-body">
+              <h4 class="menu-item-name">Double Decker Burger</h4>
+              <div class="menu-item-rating"><span class="stars-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span> <span>4.9</span></div>
+              <div class="menu-item-footer">
+                <span class="menu-item-price">Rs. 650</span>
+                <button class="btn-menu-add ripple add-btn" data-name="Double Decker Burger" data-price="650">
+                  <i class="fas fa-plus"></i> Add
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ---- Pizza ---- -->
+      <div class="menu-category-block reveal-up" id="pizza-section">
+        <div class="menu-cat-header">
+          <div class="menu-cat-icon"><i class="fas fa-pizza-slice"></i></div>
+          <div>
+            <h3 class="menu-cat-title">Fresh Pizza</h3>
+            <p class="menu-cat-sub">Stone-baked, hand-tossed dough loaded with premium mozzarella and fresh toppings</p>
+          </div>
+        </div>
+        <div class="menu-grid">
+
+          <div class="menu-card reveal-up" data-name="Pepperoni Pizza" data-price="1200">
+            <div class="menu-card-img">
+              <img src="https://images.unsplash.com/photo-1628840042765-356cda07504e?w=400&q=80" alt="Pepperoni Pizza" loading="lazy">
+              <span class="menu-img-badge">Top Rated</span>
+              <button class="menu-wish" aria-label="Wishlist"><i class="far fa-heart"></i></button>
+            </div>
+            <div class="menu-card-body">
+              <h4 class="menu-item-name">Pepperoni Pizza</h4>
+              <div class="menu-item-rating"><span class="stars-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span> <span>4.9</span></div>
+              <div class="menu-item-footer">
+                <span class="menu-item-price">Rs. 1,200</span>
+                <button class="btn-menu-add ripple add-btn" data-name="Pepperoni Pizza" data-price="1200">
+                  <i class="fas fa-plus"></i> Add
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card reveal-up" data-name="Chicken Tikka Pizza" data-price="1350">
+            <div class="menu-card-img">
+              <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&q=80" alt="Chicken Tikka Pizza" loading="lazy">
+              <button class="menu-wish" aria-label="Wishlist"><i class="far fa-heart"></i></button>
+            </div>
+            <div class="menu-card-body">
+              <h4 class="menu-item-name">Chicken Tikka Pizza</h4>
+              <div class="menu-item-rating"><span class="stars-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span> <span>4.8</span></div>
+              <div class="menu-item-footer">
+                <span class="menu-item-price">Rs. 1,350</span>
+                <button class="btn-menu-add ripple add-btn" data-name="Chicken Tikka Pizza" data-price="1350">
+                  <i class="fas fa-plus"></i> Add
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card reveal-up" data-name="Veggie Supreme" data-price="1100">
+            <div class="menu-card-img">
+              <img src="https://images.unsplash.com/photo-1541745537411-b8046dc6d66c?w=400&q=80" alt="Veggie Supreme" loading="lazy">
+              <span class="menu-img-badge badge-veg"><i class="fas fa-seedling"></i> Veg</span>
+              <button class="menu-wish" aria-label="Wishlist"><i class="far fa-heart"></i></button>
+            </div>
+            <div class="menu-card-body">
+              <h4 class="menu-item-name">Veggie Supreme</h4>
+              <div class="menu-item-rating"><span class="stars-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></span> <span>4.5</span></div>
+              <div class="menu-item-footer">
+                <span class="menu-item-price">Rs. 1,100</span>
+                <button class="btn-menu-add ripple add-btn" data-name="Veggie Supreme" data-price="1100">
+                  <i class="fas fa-plus"></i> Add
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card reveal-up" data-name="BBQ Chicken Pizza" data-price="1400">
+            <div class="menu-card-img">
+              <img src="https://images.unsplash.com/photo-1595854341625-f33ee10dbf94?w=400&q=80" alt="BBQ Chicken Pizza" loading="lazy">
+              <button class="menu-wish" aria-label="Wishlist"><i class="far fa-heart"></i></button>
+            </div>
+            <div class="menu-card-body">
+              <h4 class="menu-item-name">BBQ Chicken Pizza</h4>
+              <div class="menu-item-rating"><span class="stars-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span> <span>4.7</span></div>
+              <div class="menu-item-footer">
+                <span class="menu-item-price">Rs. 1,400</span>
+                <button class="btn-menu-add ripple add-btn" data-name="BBQ Chicken Pizza" data-price="1400">
+                  <i class="fas fa-plus"></i> Add
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card reveal-up" data-name="Margherita Pizza" data-price="950">
+            <div class="menu-card-img">
+              <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=400&q=80" alt="Margherita Pizza" loading="lazy">
+              <button class="menu-wish" aria-label="Wishlist"><i class="far fa-heart"></i></button>
+            </div>
+            <div class="menu-card-body">
+              <h4 class="menu-item-name">Margherita Pizza</h4>
+              <div class="menu-item-rating"><span class="stars-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></span> <span>4.4</span></div>
+              <div class="menu-item-footer">
+                <span class="menu-item-price">Rs. 950</span>
+                <button class="btn-menu-add ripple add-btn" data-name="Margherita Pizza" data-price="950">
+                  <i class="fas fa-plus"></i> Add
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ---- Drinks ---- -->
+      <div class="menu-category-block menu-alt-layout reveal-up" id="drinks-section">
+        <div class="menu-cat-header">
+          <div class="menu-cat-icon"><i class="fas fa-glass-whiskey"></i></div>
+          <div>
+            <h3 class="menu-cat-title">Soft Drinks & Beverages</h3>
+            <p class="menu-cat-sub">Chilled refreshers, fresh juices, and thick milkshakes</p>
+          </div>
+        </div>
+        <div class="menu-grid">
+
+          <div class="menu-card reveal-up" data-name="Coca Cola" data-price="120">
+            <div class="menu-card-img">
+              <img src="https://images.unsplash.com/photo-1581006852262-e4307cf6283a?w=400&q=80" alt="Coca Cola" loading="lazy">
+              <button class="menu-wish" aria-label="Wishlist"><i class="far fa-heart"></i></button>
+            </div>
+            <div class="menu-card-body">
+              <h4 class="menu-item-name">Coca Cola</h4>
+              <div class="menu-item-rating"><span class="stars-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span> <span>4.9</span></div>
+              <div class="menu-item-footer">
+                <span class="menu-item-price">Rs. 120</span>
+                <button class="btn-menu-add ripple add-btn" data-name="Coca Cola" data-price="120">
+                  <i class="fas fa-plus"></i> Add
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card reveal-up" data-name="Pepsi" data-price="120">
+            <div class="menu-card-img">
+              <img src="https://images.unsplash.com/photo-1629203851122-3726ecdf080e?w=400&q=80" alt="Pepsi" loading="lazy">
+              <button class="menu-wish" aria-label="Wishlist"><i class="far fa-heart"></i></button>
+            </div>
+            <div class="menu-card-body">
+              <h4 class="menu-item-name">Pepsi</h4>
+              <div class="menu-item-rating"><span class="stars-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span> <span>4.8</span></div>
+              <div class="menu-item-footer">
+                <span class="menu-item-price">Rs. 120</span>
+                <button class="btn-menu-add ripple add-btn" data-name="Pepsi" data-price="120">
+                  <i class="fas fa-plus"></i> Add
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card reveal-up" data-name="Sprite" data-price="120">
+            <div class="menu-card-img">
+              <img src="https://images.unsplash.com/photo-1625772299848-391b6a87d7b3?w=400&q=80" alt="Sprite" loading="lazy">
+              <button class="menu-wish" aria-label="Wishlist"><i class="far fa-heart"></i></button>
+            </div>
+            <div class="menu-card-body">
+              <h4 class="menu-item-name">Sprite</h4>
+              <div class="menu-item-rating"><span class="stars-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></span> <span>4.6</span></div>
+              <div class="menu-item-footer">
+                <span class="menu-item-price">Rs. 120</span>
+                <button class="btn-menu-add ripple add-btn" data-name="Sprite" data-price="120">
+                  <i class="fas fa-plus"></i> Add
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card reveal-up" data-name="Fresh Orange Juice" data-price="250">
+            <div class="menu-card-img">
+              <img src="https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=400&q=80" alt="Fresh Orange Juice" loading="lazy">
+              <span class="menu-img-badge badge-veg"><i class="fas fa-leaf"></i> Fresh</span>
+              <button class="menu-wish" aria-label="Wishlist"><i class="far fa-heart"></i></button>
+            </div>
+            <div class="menu-card-body">
+              <h4 class="menu-item-name">Fresh Orange Juice</h4>
+              <div class="menu-item-rating"><span class="stars-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span> <span>4.9</span></div>
+              <div class="menu-item-footer">
+                <span class="menu-item-price">Rs. 250</span>
+                <button class="btn-menu-add ripple add-btn" data-name="Fresh Orange Juice" data-price="250">
+                  <i class="fas fa-plus"></i> Add
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card reveal-up" data-name="Mango Shake" data-price="320">
+            <div class="menu-card-img">
+              <img src="https://images.unsplash.com/photo-1577805947697-89e18249d767?w=400&q=80" alt="Mango Shake" loading="lazy">
+              <button class="menu-wish" aria-label="Wishlist"><i class="far fa-heart"></i></button>
+            </div>
+            <div class="menu-card-body">
+              <h4 class="menu-item-name">Mango Shake</h4>
+              <div class="menu-item-rating"><span class="stars-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span> <span>4.8</span></div>
+              <div class="menu-item-footer">
+                <span class="menu-item-price">Rs. 320</span>
+                <button class="btn-menu-add ripple add-btn" data-name="Mango Shake" data-price="320">
+                  <i class="fas fa-plus"></i> Add
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card reveal-up" data-name="Chocolate Shake" data-price="350">
+            <div class="menu-card-img">
+              <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400&q=80" alt="Chocolate Shake" loading="lazy">
+              <span class="menu-img-badge">Top Pick</span>
+              <button class="menu-wish" aria-label="Wishlist"><i class="far fa-heart"></i></button>
+            </div>
+            <div class="menu-card-body">
+              <h4 class="menu-item-name">Chocolate Shake</h4>
+              <div class="menu-item-rating"><span class="stars-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span> <span>4.9</span></div>
+              <div class="menu-item-footer">
+                <span class="menu-item-price">Rs. 350</span>
+                <button class="btn-menu-add ripple add-btn" data-name="Chocolate Shake" data-price="350">
+                  <i class="fas fa-plus"></i> Add
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ---- Sides ---- -->
+      <div class="menu-category-block reveal-up" id="sides-section">
+        <div class="menu-cat-header">
+          <div class="menu-cat-icon"><i class="fas fa-utensils"></i></div>
+          <div>
+            <h3 class="menu-cat-title">Sides & Appetizers</h3>
+            <p class="menu-cat-sub">Crispy, savory snacks to complete your order</p>
+          </div>
+        </div>
+        <div class="menu-grid">
+
+          <div class="menu-card reveal-up" data-name="Onion Rings" data-price="220">
+            <div class="menu-card-img">
+              <img src="https://images.unsplash.com/photo-1639024471283-03518883512d?w=400&q=80" alt="Onion Rings" loading="lazy">
+              <button class="menu-wish" aria-label="Wishlist"><i class="far fa-heart"></i></button>
+            </div>
+            <div class="menu-card-body">
+              <h4 class="menu-item-name">Onion Rings</h4>
+              <div class="menu-item-rating"><span class="stars-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></span> <span>4.4</span></div>
+              <div class="menu-item-footer">
+                <span class="menu-item-price">Rs. 220</span>
+                <button class="btn-menu-add ripple add-btn" data-name="Onion Rings" data-price="220">
+                  <i class="fas fa-plus"></i> Add
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card reveal-up" data-name="Mozzarella Sticks (6pc)" data-price="380">
+            <div class="menu-card-img">
+              <img src="https://images.unsplash.com/photo-1548340748-6d2b7d7da280?w=400&q=80" alt="Mozzarella Sticks" loading="lazy">
+              <button class="menu-wish" aria-label="Wishlist"><i class="far fa-heart"></i></button>
+            </div>
+            <div class="menu-card-body">
+              <h4 class="menu-item-name">Mozzarella Sticks (6pc)</h4>
+              <div class="menu-item-rating"><span class="stars-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span> <span>4.7</span></div>
+              <div class="menu-item-footer">
+                <span class="menu-item-price">Rs. 380</span>
+                <button class="btn-menu-add ripple add-btn" data-name="Mozzarella Sticks (6pc)" data-price="380">
+                  <i class="fas fa-plus"></i> Add
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ---- Desserts ---- -->
+      <div class="menu-category-block reveal-up" id="desserts-section">
+        <div class="menu-cat-header">
+          <div class="menu-cat-icon"><i class="fas fa-ice-cream"></i></div>
+          <div>
+            <h3 class="menu-cat-title">Desserts</h3>
+            <p class="menu-cat-sub">Rich chocolate brownies, creamy sundaes, and fresh baked pies</p>
+          </div>
+        </div>
+        <div class="menu-grid">
+
+          <div class="menu-card reveal-up" data-name="Ice Cream Sundae" data-price="280">
+            <div class="menu-card-img">
+              <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=400&q=80" alt="Ice Cream Sundae" loading="lazy">
+              <button class="menu-wish" aria-label="Wishlist"><i class="far fa-heart"></i></button>
+            </div>
+            <div class="menu-card-body">
+              <h4 class="menu-item-name">Ice Cream Sundae</h4>
+              <div class="menu-item-rating"><span class="stars-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span> <span>4.8</span></div>
+              <div class="menu-item-footer">
+                <span class="menu-item-price">Rs. 280</span>
+                <button class="btn-menu-add ripple add-btn" data-name="Ice Cream Sundae" data-price="280">
+                  <i class="fas fa-plus"></i> Add
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card reveal-up" data-name="Chocolate Brownie" data-price="320">
+            <div class="menu-card-img">
+              <img src="https://images.unsplash.com/photo-1607920591413-4ec007e70023?w=400&q=80" alt="Chocolate Brownie" loading="lazy">
+              <button class="menu-wish" aria-label="Wishlist"><i class="far fa-heart"></i></button>
+            </div>
+            <div class="menu-card-body">
+              <h4 class="menu-item-name">Chocolate Brownie</h4>
+              <div class="menu-item-rating"><span class="stars-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span> <span>4.9</span></div>
+              <div class="menu-item-footer">
+                <span class="menu-item-price">Rs. 320</span>
+                <button class="btn-menu-add ripple add-btn" data-name="Chocolate Brownie" data-price="320">
+                  <i class="fas fa-plus"></i> Add
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card reveal-up" data-name="Apple Pie" data-price="250">
+            <div class="menu-card-img">
+              <img src="https://images.unsplash.com/photo-1535920527002-b35e96722eb9?w=400&q=80" alt="Apple Pie" loading="lazy">
+              <button class="menu-wish" aria-label="Wishlist"><i class="far fa-heart"></i></button>
+            </div>
+            <div class="menu-card-body">
+              <h4 class="menu-item-name">Apple Pie</h4>
+              <div class="menu-item-rating"><span class="stars-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></span> <span>4.5</span></div>
+              <div class="menu-item-footer">
+                <span class="menu-item-price">Rs. 250</span>
+                <button class="btn-menu-add ripple add-btn" data-name="Apple Pie" data-price="250">
+                  <i class="fas fa-plus"></i> Add
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card reveal-up" data-name="Cookies (3pc)" data-price="180">
+            <div class="menu-card-img">
+              <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=400&q=80" alt="Cookies" loading="lazy">
+              <button class="menu-wish" aria-label="Wishlist"><i class="far fa-heart"></i></button>
+            </div>
+            <div class="menu-card-body">
+              <h4 class="menu-item-name">Cookies (3pc)</h4>
+              <div class="menu-item-rating"><span class="stars-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></span> <span>4.6</span></div>
+              <div class="menu-item-footer">
+                <span class="menu-item-price">Rs. 180</span>
+                <button class="btn-menu-add ripple add-btn" data-name="Cookies (3pc)" data-price="180">
+                  <i class="fas fa-plus"></i> Add
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- WHY CHOOSE US -->
+  <!-- ============================================================ -->
+  <section class="why-section" id="about">
+    <div class="why-bg">
+      <div class="why-shape-1"></div>
+      <div class="why-shape-2"></div>
+    </div>
+    <div class="section-container">
+      <div class="section-header reveal-up" style="color:#fff">
+        <p class="section-label" style="color:#FFC72C"><i class="fas fa-award"></i> Brand Standards</p>
+        <h2 class="section-title" style="color:#fff">Why Choose Crunchy Bites?</h2>
+        <p class="section-subtitle" style="color:rgba(255,255,255,0.7)">Uncompromising quality standards across every restaurant kitchen</p>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-card reveal-up">
+          <div class="why-icon"><i class="fas fa-leaf"></i></div>
+          <h4>Fresh Ingredients</h4>
+          <p>Locally sourced, daily fresh produce in every single dish we make</p>
+        </div>
+        <div class="why-card reveal-up">
+          <div class="why-icon"><i class="fas fa-motorcycle"></i></div>
+          <h4>Fast Delivery</h4>
+          <p>Hot food at your door in under 30 minutes — guaranteed express service</p>
+        </div>
+        <div class="why-card reveal-up">
+          <div class="why-icon"><i class="fas fa-shield-alt"></i></div>
+          <h4>Secure Payment</h4>
+          <p>256-bit encrypted checkout across all major card networks and mobile wallets</p>
+        </div>
+        <div class="why-card reveal-up">
+          <div class="why-icon"><i class="fas fa-award"></i></div>
+          <h4>Signature Flavor</h4>
+          <p>Proprietary seasoning blends and recipes perfected over a decade</p>
+        </div>
+        <div class="why-card reveal-up">
+          <div class="why-icon"><i class="fas fa-check-circle"></i></div>
+          <h4>Certified Hygiene</h4>
+          <p>Food-grade certified kitchens with strict cleanliness and safety protocols</p>
+        </div>
+        <div class="why-card reveal-up">
+          <div class="why-icon"><i class="fas fa-headset"></i></div>
+          <h4>24/7 Support</h4>
+          <p>Dedicated customer support team available round the clock for order inquiries</p>
+        </div>
+      </div>
+
+      <!-- Stats Row -->
+      <div class="about-stats-row reveal-up">
+        <div class="about-stat-item">
+          <span class="about-stat-num">10+</span>
+          <span class="about-stat-label">Years of Culinary Excellence</span>
+        </div>
+        <div class="about-stat-divider"></div>
+        <div class="about-stat-item">
+          <span class="about-stat-num">50K+</span>
+          <span class="about-stat-label">Active Customers</span>
+        </div>
+        <div class="about-stat-divider"></div>
+        <div class="about-stat-item">
+          <span class="about-stat-num">30 Min</span>
+          <span class="about-stat-label">Average Delivery Time</span>
+        </div>
+        <div class="about-stat-divider"></div>
+        <div class="about-stat-item">
+          <span class="about-stat-num">4.9 / 5</span>
+          <span class="about-stat-label">App Rating</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- TESTIMONIALS -->
+  <!-- ============================================================ -->
+  <section class="testimonials-section">
+    <div class="section-container">
+      <div class="section-header reveal-up">
+        <p class="section-label"><i class="fas fa-quote-left"></i> Customer Feedback</p>
+        <h2 class="section-title">What Our Guests Say</h2>
+        <p class="section-subtitle">Real experiences from verified food lovers across the country</p>
+      </div>
+
+      <div class="testimonials-carousel-wrap reveal-up">
+        <div class="testimonials-track" id="testimonialsTrack">
+
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-text">"Crispy Zinger Burger is easily the best in town — juicy, crisp batter, and perfectly seasoned. Delivery was under 25 minutes!"</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar" style="background: linear-gradient(135deg, #E31837, #ff6b6b)">AK</div>
+              <div>
+                <strong>Ahmed Khan</strong>
+                <small>Lahore</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-text">"The Family Bucket Deal offers exceptional value. Generous portions, crisp packaging, and hot food delivered right on time."</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar" style="background: linear-gradient(135deg, #FFC72C, #ff9500)">SA</div>
+              <div>
+                <strong>Sara Amjad</strong>
+                <small>Karachi</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-text">"A truly international fast-food standard. Chicken Tikka Pizza crust was perfectly baked and loaded with fresh mozzarella."</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar" style="background: linear-gradient(135deg, #6c63ff, #3f3d56)">OR</div>
+              <div>
+                <strong>Omar Raza</strong>
+                <small>Islamabad</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-text">"The web ordering experience is seamless and fast. Double Decker Burger arrived piping hot and tasted incredible."</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar" style="background: linear-gradient(135deg, #00b894, #00cec9)">FM</div>
+              <div>
+                <strong>Fatima Malik</strong>
+                <small>Rawalpindi</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-text">"Thick, rich Chocolate Milkshake paired with golden mozzarella sticks — absolute perfection for a weekend craving."</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar" style="background: linear-gradient(135deg, #fd79a8, #e84393)">ZH</div>
+              <div>
+                <strong>Zara Hassan</strong>
+                <small>Multan</small>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="testimonial-controls">
+          <button class="testi-btn" id="testiPrev" aria-label="Previous review"><i class="fas fa-chevron-left"></i></button>
+          <div class="testi-dots" id="testiDots"></div>
+          <button class="testi-btn" id="testiNext" aria-label="Next review"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- DOWNLOAD APP BANNER -->
+  <!-- ============================================================ -->
+  <section class="app-section">
+    <div class="app-container">
+      <div class="app-content reveal-up">
+        <p class="section-label" style="color:#FFC72C"><i class="fas fa-mobile-alt"></i> Mobile Experience</p>
+        <h2 class="app-title">Order Faster.<br>Track in Real-Time.</h2>
+        <p class="app-desc">Download the Crunchy Bites app for exclusive promotional codes, live order status tracking, and a streamlined checkout experience on iOS and Android.</p>
+        <div class="app-perks">
+          <div class="app-perk"><i class="fas fa-bolt"></i> 1-Tap Express Ordering</div>
+          <div class="app-perk"><i class="fas fa-map-marker-alt"></i> GPS Courier Tracking</div>
+          <div class="app-perk"><i class="fas fa-percent"></i> App-Exclusive Deals</div>
+        </div>
+        <div class="app-btns">
+          <a href="#" class="store-btn">
+            <i class="fab fa-apple"></i>
+            <div>
+              <small>Download on the</small>
+              <strong>App Store</strong>
+            </div>
+          </a>
+          <a href="#" class="store-btn">
+            <i class="fab fa-google-play"></i>
+            <div>
+              <small>Get it on</small>
+              <strong>Google Play</strong>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="app-phone reveal-up">
+        <div class="phone-mockup">
+          <div class="phone-screen">
+            <div class="phone-content">
+              <div class="phone-header">
+                <div class="phone-logo"><i class="fas fa-fire"></i> CB</div>
+                <div class="phone-cart-icon"><i class="fas fa-shopping-bag"></i></div>
+              </div>
+              <div class="phone-hero-img">
+                <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=200&q=80" alt="App food preview" loading="lazy">
+              </div>
+              <div class="phone-card">
+                <span>Double Decker</span>
+                <strong>Rs. 650</strong>
+              </div>
+              <div class="phone-card">
+                <span>Pepperoni Pizza</span>
+                <strong>Rs. 1,200</strong>
+              </div>
+              <div class="phone-order-btn">ORDER NOW</div>
+            </div>
+          </div>
+          <div class="phone-notch"></div>
+        </div>
+        <!-- Floating app badges -->
+        <div class="phone-badge phone-badge-1">
+          <i class="fas fa-star" style="color:#FFC72C"></i>
+          <span>4.9 Rating</span>
+        </div>
+        <div class="phone-badge phone-badge-2">
+          <i class="fas fa-download"></i>
+          <span>100K+ Downloads</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- FOOTER -->
+  <!-- ============================================================ -->
+  <footer class="footer" id="contact">
+    <div class="footer-top">
+      <div class="footer-container">
+
+        <!-- Brand -->
+        <div class="footer-col footer-brand">
+          <a href="#home" class="footer-logo">
+            <div class="logo-icon"><i class="fas fa-fire"></i></div>
+            <div class="logo-text">
+              <span class="logo-primary">Crunchy</span><span class="logo-secondary">Bites</span>
+            </div>
+          </a>
+          <p class="footer-tagline">Crafting memorable food experiences with fresh ingredients, crisp perfection, and reliable express delivery.</p>
+          <div class="footer-social">
+            <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+            <a href="#" class="social-link" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" class="social-link" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+          <h5 class="footer-heading">Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#menu">Full Menu</a></li>
+            <li><a href="#deals">Deals & Offers</a></li>
+            <li><a href="#categories">Categories</a></li>
+            <li><a href="#about">About Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Help -->
+        <div class="footer-col">
+          <h5 class="footer-heading">Help Center</h5>
+          <ul class="footer-links">
+            <li><a href="#">Track Order</a></li>
+            <li><a href="#">Delivery Coverage</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter -->
+        <div class="footer-col">
+          <h5 class="footer-heading">Stay Connected</h5>
+          <p class="footer-newsletter-desc">Subscribe to receive exclusive deals and new menu item announcements.</p>
+          <div class="footer-newsletter">
+            <input type="email" placeholder="Your email address" id="newsletterEmail">
+            <button class="btn-newsletter">Subscribe</button>
+          </div>
+          <div class="footer-contact-info">
+            <div class="footer-contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Gulberg III, Lahore, Pakistan</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fas fa-phone"></i>
+              <span>+92 300 123 4567</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fas fa-envelope"></i>
+              <span>hello@crunchybites.pk</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-container">
+        <p>&copy; 2026 Crunchy Bites. All Rights Reserved.</p>
+        <div class="footer-payment-logos">
+          <span class="pay-logo"><i class="fab fa-cc-visa"></i></span>
+          <span class="pay-logo"><i class="fab fa-cc-mastercard"></i></span>
+          <span class="pay-logo"><i class="fab fa-cc-apple-pay"></i></span>
+          <span class="pay-logo"><i class="fab fa-google-pay"></i></span>
+          <span class="pay-logo pay-logo-text">JazzCash</span>
+          <span class="pay-logo pay-logo-text">EasyPaisa</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================ -->
+  <!-- CART DRAWER -->
+  <!-- ============================================================ -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-drawer-header">
+      <h3><i class="fas fa-shopping-bag"></i> Your Order Summary</h3>
+      <button class="cart-close-btn" id="cartCloseBtn" aria-label="Close cart"><i class="fas fa-times"></i></button>
+    </div>
+
+    <div class="cart-items-wrap" id="cartItemsWrap">
+      <div class="cart-empty" id="cartEmptyMsg">
+        <i class="fas fa-shopping-bag"></i>
+        <p>Your cart is empty</p>
+        <small>Select delicious items from our menu to build your order.</small>
+      </div>
+    </div>
+
+    <!-- Coupon -->
+    <div class="cart-coupon">
+      <input type="text" id="couponInput" placeholder="Promo code (e.g. WELCOME10)">
+      <button class="btn-coupon" id="applyCouponBtn">Apply</button>
+    </div>
+
+    <!-- Order Summary -->
+    <div class="cart-summary">
+      <div class="cart-summary-row">
+        <span>Subtotal</span>
+        <span id="cartSubtotal">Rs. 0</span>
+      </div>
+      <div class="cart-summary-row">
+        <span>Delivery Fee</span>
+        <span id="cartDelivery">Rs. 99</span>
+      </div>
+      <div class="cart-summary-row" id="discountRow" style="display:none">
+        <span>Discount</span>
+        <span id="cartDiscount" style="color:#22c55e">-Rs. 0</span>
+      </div>
+      <div class="cart-summary-row">
+        <span>Tax (5%)</span>
+        <span id="cartTax">Rs. 0</span>
+      </div>
+      <div class="cart-summary-total">
+        <span>Grand Total</span>
+        <span id="cartTotal">Rs. 99</span>
+      </div>
+    </div>
+
+    <!-- Payment Methods -->
+    <div class="cart-payment-methods">
+      <p class="cart-payment-label">Payment Method</p>
+      <div class="payment-methods-grid">
+        <button class="payment-method-btn active" data-method="cod">
+          <i class="fas fa-money-bill-wave"></i>
+          <span>Cash</span>
+        </button>
+        <button class="payment-method-btn" data-method="visa">
+          <i class="fab fa-cc-visa"></i>
+          <span>Visa</span>
+        </button>
+        <button class="payment-method-btn" data-method="mastercard">
+          <i class="fab fa-cc-mastercard"></i>
+          <span>Mastercard</span>
+        </button>
+        <button class="payment-method-btn" data-method="applepay">
+          <i class="fab fa-apple-pay"></i>
+          <span>Apple Pay</span>
+        </button>
+        <button class="payment-method-btn" data-method="googlepay">
+          <i class="fab fa-google-pay"></i>
+          <span>G Pay</span>
+        </button>
+        <button class="payment-method-btn" data-method="jazz">
+          <span class="pay-text-icon">J</span>
+          <span>JazzCash</span>
         </button>
       </div>
     </div>
 
+    <!-- Place Order Button -->
+    <button class="btn-place-order ripple" id="placeOrderBtn">
+      <i class="fas fa-check-circle"></i>
+      Place Order
+    </button>
 
-    <!-- About Section -->
-    <section class="about-section fade-in-up" id="about">
-      <div class="about-content">
-        <div class="about-text">
-          <h2>Our Story</h2>
-          <p>Founded in 2026, Premium Bites started with a simple mission: to bridge the gap between fast food and
-            gourmet quality. We believe that speed shouldn't come at the cost of flavor or freshness.</p>
-          <p>Our chefs use only the finest locally-sourced ingredients, ensuring every bite is a premium experience.
-            From our hand-breaded chicken to our artisanal pizza dough, quality is in our DNA.</p>
-          <div class="about-stats">
-            <div class="stat-item">
-              <span class="stat-number">10+</span>
-              <span class="stat-label">Years of Flavor</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-number">50k+</span>
-              <span class="stat-label">Happy Customers</span>
-            </div>
-          </div>
-        </div>
-        <div class="about-image">
-          <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&q=80" alt="Our Atmosphere">
-        </div>
-      </div>
-    </section>
+    <div class="cart-secure-note">
+      <i class="fas fa-lock"></i>
+      <span>256-bit SSL Encrypted Checkout</span>
+    </div>
+  </div>
 
+  <!-- Floating Cart Button (Mobile) -->
+  <button class="floating-cart" id="floatingCartBtn" style="display:none" aria-label="View Cart">
+    <i class="fas fa-shopping-bag"></i>
+    <span id="floatingCartCount">0</span>
+  </button>
 
+  <!-- Toast container -->
+  <div id="toastContainer"></div>
 
-    <!-- Footer -->
-    <footer>
-      <p>Follow us on social media</p>
-      <div class="social-links">
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-whatsapp"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-      </div>
-      <br>
-      <p>&copy; 2026 Premium Bites. All Rights Reserved.</p>
-    </footer>
-
-    <!-- Custom JS -->
-    <script src="script.js"></script>
+  <!-- Custom JS -->
+  <script src="script.js"></script>
 </body>
 
 </html>

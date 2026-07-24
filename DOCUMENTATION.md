@@ -1,61 +1,56 @@
-# 📖 Project Documentation - Premium Bites
+# Technical Documentation - Crunchy Bites
 
-This document provides a technical overview of the "Premium Bites" Cafeteria Web project.
+This document provides a comprehensive technical overview of the Crunchy Bites web application.
 
-## 📂 Project Structure
+---
+
+## Project Structure
 
 ```text
-/Resturant Web
-├── index.html        # Main entry point, project structure
-├── style.css         # Visual design and responsive layouts
-├── script.js         # Interactivity and business logic
-├── README.md         # Project overview
-├── DOCUMENTATION.md  # Technical documentation
-└── update-images.ps1 # Automation script for image updates
+Cafeteria Web/
+├── index.html        # Main HTML structure, semantic layout, accessibility metadata
+├── style.css         # CSS design system, design tokens, glassmorphism, responsive grid
+├── script.js         # Interactive application logic, cart drawer, search, timers
+├── README.md         # Public repository documentation
+├── DOCUMENTATION.md  # Detailed technical specifications
+└── update-images.ps1 # Helper script for batch image updates
 ```
 
 ---
 
-## 🏛️ Components
+## Architecture & Components
 
 ### 1. HTML (`index.html`)
-The structure is divided into several main semantic sections:
-- **Header**: Contains the logo, navigation links, and the search bar.
-- **Banner**: A hero section with a call-to-action button.
-- **Menu Section**: A two-column grid:
-    - **Menu Content**: Grouped into categories (Fried Chicken, Burgers, Pizza, etc.) using `menu-grid` and `menu-card`.
-    - **Cart Sidebar**: Floating container that tracks selected items.
-- **Footer**: Social links and copyright information.
+The document uses semantic HTML5 elements structured into cohesive sections:
+- **Navbar**: Sticky glassmorphism header containing the logo, responsive navigation links, quick search overlay, wishlist count badge, cart drawer trigger, and user login action.
+- **Hero Section**: Fullscreen split layout with call-to-action buttons, delivery guarantee badge, statistical indicators, floating product cards, and key promotional highlights.
+- **Offer Marquee**: Continuous horizontal ticker demonstrating active deals and promotions.
+- **Deals Section**: Interactive promotional offer cards featuring live JavaScript countdown timers.
+- **Food Categories**: Grid of circular category selection targets for rapid section navigation.
+- **Featured Products**: Highlighted best-selling menu items featuring quick-view and add-to-cart controls.
+- **Full Menu Catalogue**: Organised menu blocks (Crispy Chicken, Burgers, Pizza, Beverages, Sides, Desserts) utilizing data attributes (`data-name`, `data-price`) for dynamic state management.
+- **Why Choose Us**: Dark-themed brand value proposition grid detailing quality, speed, and security guarantees.
+- **Testimonial Carousel**: Multi-slide customer feedback slider with automatic rotation and manual dot/arrow pagination controls.
+- **Mobile App Banner**: Dedicated promotional section with CSS-rendered smartphone UI mockup and download CTA buttons.
+- **Cart Drawer**: Slide-over panel containing order items, quantity controls, promo code engine, live subtotal/tax/delivery calculation, payment gateway selectors, and instant checkout triggers.
+- **Footer**: Brand links, help center documentation, location info, newsletter subscription, and supported payment network indicators.
 
-### 2. CSS (`style.css`)
-- **Color Palette**: 
-    - Secondary/Accents: `#ffbd21` (Gold), `#ff4d4d` (Red)
-    - Dark Theme: `#0f172a`, `#1e293b` (Slate shades)
-- **Typography**: Uses `Montserrat` for body text and `Sora` for headings.
-- **Key Classes**:
-    - `.fade-in-up`: Handles the scroll-reveal animations.
-    - `.menu-card`: Styled container for individual food items.
-    - `.cart-sidebar`: Fixed/Sticky layout for easy access to the order summary.
+### 2. CSS Architecture (`style.css`)
+- **Design Tokens**: Standardized CSS custom properties for primary (`#E31837`), secondary (`#FFC72C`), background, typography, and shadow depth.
+- **Typography System**: Google Fonts pairing using `Poppins` for display headers and `Manrope` for UI copy.
+- **Micro-Interactions**: Custom CSS animation keyframes for floating hero assets, marquee scrolling, modal entry, ripple button feedback, and reveal animations.
+- **Responsive Layout**: Fluid CSS Grid and Flexbox structures supporting viewports down to 320px width without layout breakage.
 
-### 3. JavaScript (`script.js`)
-- **State Management**: Uses an `orderItems` array to keep track of the cart contents.
-- **Cart Logic**:
-    - `addToCart(item)`: Adds an item and updates the UI.
-    - `updateCartUI()`: Re-renders the cart sidebar and calculates the total amount.
-- **Search Logic**:
-    - Listens for input on the search bar.
-    - Filters existing menu items based on the search query.
-- **Animations**: Uses `IntersectionObserver` to trigger the `fade-in-up` class on scroll.
-
----
-
-## ⚙️ Automation
-
-### `update-images.ps1`
-A PowerShell script used to manage and update image URLs across the website. This helps in maintaining high-definition imagery from sources like Unsplash without manually editing hundreds of lines of HTML.
+### 3. JavaScript Application Logic (`script.js`)
+- **State Management**: LocalStorage-persisted cart array tracking menu items, price values, and quantities.
+- **Cart Engine**: Dynamic calculation of subtotal, free shipping thresholds (orders over Rs. 800), tax rates (5%), and applied promotional coupon discounts.
+- **Interactive Search**: Debounced client-side menu filter displaying instant query suggestions and auto-scrolling to selected menu items.
+- **Timer Subsystem**: Interval-based countdown renderer for limited-time promotional deals.
+- **Carousel Engine**: Touch-friendly testimonial slider supporting automatic rotation and window resize recalculations.
 
 ---
 
-## 🛠️ Maintenance & Future Updates
-- **Adding Items**: To add a new menu item, replicate a `.menu-card` div within the appropriate category in `index.html`. Ensure `data-name` and `data-price` attributes are correctly set.
-- **Styling Changes**: Global theme colors can be updated in the `:root` or top-level variables in `style.css`.
+## Maintenance & Updates
+
+- **Adding Menu Items**: Add a `.menu-card` or `.product-card` element to the designated category block inside `index.html`. Set `data-name` and `data-price` attributes to enable automated cart integration.
+- **Modifying Theme Variables**: Adjust color hex codes inside `:root` in `style.css` to update the global design theme.
